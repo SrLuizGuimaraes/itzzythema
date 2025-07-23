@@ -1,1 +1,93 @@
-{"type":"header","name":"Header group","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"message-1":{"type":"message","settings":{"text":"10% OFF NA 1º COMPRA COM O CUPOM WELCOME"}},"message_BEkiRV":{"type":"message","settings":{"text":"FRETE GRÁTIS A PARTIR DE R$499,99"}},"message_7f7DLJ":{"type":"message","settings":{"text":"ENVIAMOS PARA TODO O BRASIL"}}},"block_order":["message-1","message_BEkiRV","message_7f7DLJ"],"settings":{"enable_sticky":false,"autoplay":true,"cycle_speed":3,"desktop_font_size":11,"mobile_font_size":10,"background":"#ffffff","text_color":"#e32c2b"}},"header":{"type":"header","settings":{"enable_sticky":true,"show_separation_border":true,"reduce_padding":false,"logo":"shopify:\/\/shop_images\/VERMELHA_2_1.png","logo_max_width":140,"logo_mobile_max_width":100,"menu":"main-menu","sidebar_menu":"","menu_open_trigger":"hover","enable_search":true,"sidebar_text_font":"heading","sidebar_show_dividers":true,"layout":"logo_center_navigation_below","show_icons":true,"show_country_selector":false,"show_country_name":false,"show_country_flag":false,"show_locale_selector":false,"transparent_header_text_color":"#930011","transparent_logo":"shopify:\/\/shop_images\/VERMELHA_2_1.png"}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message-1": {
+          "type": "message",
+          "settings": {
+            "text": "10% OFF NA 1º COMPRA COM O CUPOM WELCOME"
+          }
+        },
+        "message_BEkiRV": {
+          "type": "message",
+          "settings": {
+            "text": "FRETE GRÁTIS A PARTIR DE R$499,99"
+          }
+        },
+        "message_7f7DLJ": {
+          "type": "message",
+          "settings": {
+            "text": "ENVIAMOS PARA TODO O BRASIL"
+          }
+        }
+      },
+      "block_order": [
+        "message-1",
+        "message_BEkiRV",
+        "message_7f7DLJ"
+      ],
+      "settings": {
+        "enable_sticky": false,
+        "autoplay": true,
+        "cycle_speed": 3,
+        "desktop_font_size": 11,
+        "mobile_font_size": 10,
+        "background": "#ffffff",
+        "text_color": "#e32c2b"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "enable_sticky": true,
+        "show_separation_border": true,
+        "reduce_padding": false,
+        "logo": "shopify://shop_images/VERMELHA_2_1.png",
+        "logo_max_width": 140,
+        "logo_mobile_max_width": 100,
+        "menu": "main-menu",
+        "sidebar_menu": "",
+        "menu_open_trigger": "hover",
+        "enable_search": true,
+        "sidebar_text_font": "heading",
+        "sidebar_show_dividers": true,
+        "layout": "logo_center_navigation_below",
+        "show_icons": true,
+        "show_country_selector": false,
+        "show_country_name": false,
+        "show_country_flag": false,
+        "show_locale_selector": false,
+        "transparent_header_text_color": "#930011",
+        "transparent_logo": "shopify://shop_images/VERMELHA_2_1.png"
+      }
+    },
+    "custom_liquid_zXFbYg": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "{% assign free_shipping_limit = 499.99 %}\n{% assign subtotal = cart.total_price | divided_by: 100.0 %}\n\n<div id=\"freteGratisMsg\"></div>\n\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    function formatCurrency(value) {\n      return value.toFixed(2).replace('.', ',');\n    }\n\n    const subtotal = {{ subtotal | json }};\n    const freeShippingLimit = {{ free_shipping_limit | json }};\n    const difference = freeShippingLimit - subtotal;\n    const progress = Math.min(100, Math.round((subtotal / freeShippingLimit) * 100));\n\n    let message = '';\n    if (difference > 0) {\n      message = `Faltam <strong>R$${formatCurrency(difference)}</strong> para você ganhar frete grátis!`;\n    } else {\n      message = `<strong>Parabéns! Você ganhou frete grátis! 🎉</strong>`;\n    }\n\n    const infoDiv = document.getElementById('freteGratisMsg');\n    if (infoDiv) {\n      infoDiv.style.background = '#67101A';\n      infoDiv.style.color = '#FFFFFF';\n      infoDiv.style.padding = '15px';\n      infoDiv.style.margin = '15px 0';\n      infoDiv.style.fontSize = '16px';\n      infoDiv.style.fontWeight = 'bold';\n      infoDiv.style.borderRadius = '8px';\n      infoDiv.style.textAlign = 'center';\n      infoDiv.style.border = '1px solid #6F1C29';\n\n      infoDiv.innerHTML = `\n        <div style=\"margin-bottom: 10px;\">${message}</div>\n        <div style=\"background-color: #8b3c4a; height: 10px; border-radius: 6px; overflow: hidden; position: relative;\">\n          <div style=\"width: ${progress}%; height: 100%; background-color: #FFFFFF; transition: width 0.3s;\"></div>\n        </div>\n        <div style=\"font-size: 14px; margin-top: 6px; color: #FFFFFF;\">${progress}% do caminho para o frete grátis</div>\n      `;\n    }\n  });\n</script>",
+        "text_alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_zXFbYg",
+    "announcement-bar",
+    "header"
+  ]
+}

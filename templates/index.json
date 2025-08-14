@@ -15,7 +15,7 @@
         "image_P7GBAd": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_pc_4.png",
+            "image": "shopify://shop_images/Banner_pc_1_e92c6606-216c-4032-8ca5-0d8000021445.png",
             "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_2_79540c4f-6889-43f0-a5a6-af5640a27ef3.png",
             "subheading": "",
             "title": "",
@@ -23,7 +23,7 @@
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 1200,
             "button_1_text": "",
-            "button_1_link": "shopify://collections/juicy-fresher-than-ever",
+            "button_1_link": "shopify://collections/perfect-march",
             "button_1_style": "link",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",

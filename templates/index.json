@@ -1,1 +1,399 @@
-{"sections":{"slideshow":{"type":"slideshow","blocks":{"image_P7GBAd":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner_pc_4.png","mobile_image":"shopify:\/\/shop_images\/Copia_de_Banner_site_Itzzy_mobile.png","subheading":"","title":"","mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","content_max_width":1200,"button_1_text":"","button_1_link":"shopify:\/\/collections\/juicy-fresher-than-ever","button_1_style":"link","button_1_background":"#ffffff","button_1_text_color":"#000000","button_2_text":"","button_2_link":"shopify:\/\/collections\/all","button_2_style":"outline","button_2_background":"#ffffff","button_2_text_color":"#000000","background":"","background_opacity":100,"text_color":"#ffffff","border_color":"","gradient_overlay":"linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"}},"image_PXM4YW":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner_pc_5.png","mobile_image":"shopify:\/\/shop_images\/Copia_de_Banner_site_Itzzy_mobile_1.png","subheading":"","title":"","mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","content_max_width":1200,"button_1_text":"","button_1_link":"shopify:\/\/collections\/mix-match","button_1_style":"solid","button_1_background":"#ffffff","button_1_text_color":"#000000","button_2_text":"","button_2_link":"https:\/\/itzzy.com.br\/collections\/mix-match","button_2_style":"outline","button_2_background":"#ffffff","button_2_text_color":"#000000","background":"","background_opacity":50,"text_color":"#ffffff","border_color":"","gradient_overlay":""}}},"block_order":["image_P7GBAd","image_PXM4YW"],"settings":{"allow_transparent_header":true,"show_next_section_button":true,"media_size":"auto","autoplay":true,"autoplay_pause_on_video":true,"cycle_speed":5,"background":"#000000","controls_color":"#ffffff"}},"collection-list":{"type":"collection-list","blocks":{"collection-1":{"type":"collection","settings":{"collection":"brinco","image":"shopify:\/\/shop_images\/2.png","expand_collection":false,"content_position":"place-self-end-start text-start","subheading":"","title":"","button_text":"Brincos","button_link":"","text_color":"#ffe6e2","overlay_color":"#930011","overlay_opacity":0,"button_background":"#930011","button_text_color":"#ffe6e2"}},"collection-2":{"type":"collection","settings":{"collection":"aneis","image":"shopify:\/\/shop_images\/1_bbfdc341-c933-4099-9156-6de5a21c65e1.png","expand_collection":false,"content_position":"place-self-end-start text-start","subheading":"","title":"","button_text":"Aneis","button_link":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0,"button_background":"#930011","button_text_color":"#ffe6e2"}},"collection-3":{"type":"collection","settings":{"collection":"colar","image":"shopify:\/\/shop_images\/Itzzy_site_3.png","expand_collection":false,"content_position":"place-self-end-start text-start","subheading":"","title":"","button_text":"Colares","button_link":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0,"button_background":"#930011","button_text_color":"#ffe6e2"}}},"block_order":["collection-1","collection-2","collection-3"],"custom_css":["{margin-top: 1%;}"],"settings":{"separate_section_with_border":true,"image_size":"sm","show_text_outside":false,"space_items":false,"stack_collections":true,"collections_per_row_desktop":3,"subheading":"","title":"","content":"","circle_button_background":"#ffffff","circle_button_text_color":"#1c1c1c"}},"featured_collections_QtNRx9":{"type":"featured-collections","blocks":{"collection_faxmdG":{"type":"collection","settings":{"collection":"mais-vendidos","products_count":8,"title":"","link_url":"","link_text":"View all"}}},"block_order":["collection_faxmdG"],"name":"t:sections.featured_collections.presets.featured_collections.name","settings":{"separate_section_with_border":true,"hide_product_information":false,"stack_products":false,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":""}},"featured_collections_tAwkiy":{"type":"featured-collections","blocks":{"collection_CzKa4P":{"type":"collection","settings":{"collection":"aneis","products_count":8,"title":"","link_url":"","link_text":"Explore Mais"}}},"block_order":["collection_CzKa4P"],"settings":{"separate_section_with_border":false,"hide_product_information":false,"stack_products":false,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":""}},"featured_collections_EXXg4Y":{"type":"featured-collections","blocks":{"collection_M9TE6g":{"type":"collection","settings":{"collection":"mix-match","products_count":8,"title":"","link_url":"shopify:\/\/collections\/mix-match","link_text":"View all"}}},"block_order":["collection_M9TE6g"],"settings":{"separate_section_with_border":false,"hide_product_information":false,"stack_products":false,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":""}},"featured_collections_KfYgFT":{"type":"featured-collections","blocks":{"collection_XgHk47":{"type":"collection","settings":{"collection":"colar","products_count":8,"title":"","link_url":"","link_text":"View all"}}},"block_order":["collection_XgHk47"],"settings":{"separate_section_with_border":true,"hide_product_information":false,"stack_products":false,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":""}},"featured_collections_eqQry9":{"type":"featured-collections","blocks":{"collection_kBVNtk":{"type":"collection","settings":{"collection":"brinco","products_count":8,"title":"","link_url":"","link_text":"View all"}}},"block_order":["collection_kBVNtk"],"settings":{"separate_section_with_border":true,"hide_product_information":false,"stack_products":false,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":""}},"image_with_text_Kw7dH3":{"type":"image-with-text","blocks":{"subheading_c9m76K":{"type":"subheading","settings":{"text":""}},"heading_dJbHW6":{"type":"heading","settings":{"text":"about us","heading_tag":"h1"}},"richtext_DWCyUF":{"type":"richtext","settings":{"content":"<h6>A moda é uma forma de expressão, uma maneira de nos apresentarmos ao mundo antes mesmo de dizer uma palavra.<br\/><br\/>Os acessórios proporcionam a liberdade para sermos criativos e adicionarmos personalidade a qualquer produção. Eles são elementos que podem transmitir nosso humor, sentimentos e confiança para o mundo ao nosso redor.<br\/><br\/>Bem-vindos à Itzzy, by Victoria Carvalho, onde celebramos o que nos torna únicos e mostramos quem realmente somos.<\/h6>"}}},"block_order":["subheading_c9m76K","heading_dJbHW6","richtext_DWCyUF"],"settings":{"separate_section_with_border":true,"image":"shopify:\/\/shop_images\/Fotos_Still_-_Itzzy_323c5085-e95d-48cc-a829-135a9d2f0899.jpg","reveal_on_scroll":true,"image_position":"start","content_width":"md","remove_vertical_spacing":true}},"slideshow_cHccbU":{"type":"slideshow","blocks":{"image_xhjyxy":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner_pc_1560_x_500_px_1.png","subheading":"","title":"","mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","content_max_width":780,"button_1_text":"","button_1_link":"","button_1_style":"solid","button_1_background":"#ffffff","button_1_text_color":"#000000","button_2_text":"","button_2_link":"","button_2_style":"outline","button_2_background":"#ffffff","button_2_text_color":"#000000","background":"","background_opacity":0,"text_color":"#ffffff","border_color":"","gradient_overlay":"linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"}}},"block_order":["image_xhjyxy"],"settings":{"allow_transparent_header":true,"show_next_section_button":true,"media_size":"auto","autoplay":true,"autoplay_pause_on_video":true,"cycle_speed":5,"background":"#000000","controls_color":"#ffffff"}}},"order":["slideshow","collection-list","featured_collections_QtNRx9","featured_collections_tAwkiy","featured_collections_EXXg4Y","featured_collections_KfYgFT","featured_collections_eqQry9","image_with_text_Kw7dH3","slideshow_cHccbU"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "image_P7GBAd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_pc_4.png",
+            "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_1_85ad9778-d1e5-41ae-85c2-8df734a4fd14.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 1200,
+            "button_1_text": "",
+            "button_1_link": "shopify://collections/juicy-fresher-than-ever",
+            "button_1_style": "link",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "shopify://collections/all",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 100,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        },
+        "image_PXM4YW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_pc_5.png",
+            "mobile_image": "shopify://shop_images/Copia_de_Banner_site_Itzzy_mobile_1.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 1200,
+            "button_1_text": "",
+            "button_1_link": "shopify://collections/mix-match",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "https://itzzy.com.br/collections/mix-match",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_P7GBAd",
+        "image_PXM4YW"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff"
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "brinco",
+            "image": "shopify://shop_images/2.png",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Brincos",
+            "button_link": "",
+            "text_color": "#ffe6e2",
+            "overlay_color": "#930011",
+            "overlay_opacity": 0,
+            "button_background": "#930011",
+            "button_text_color": "#ffe6e2"
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "aneis",
+            "image": "shopify://shop_images/1_bbfdc341-c933-4099-9156-6de5a21c65e1.png",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Aneis",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "button_background": "#930011",
+            "button_text_color": "#ffe6e2"
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "colar",
+            "image": "shopify://shop_images/Itzzy_site_3.png",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Colares",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "button_background": "#930011",
+            "button_text_color": "#ffe6e2"
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3"
+      ],
+      "custom_css": [
+        "{margin-top: 1%;}"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "image_size": "sm",
+        "show_text_outside": false,
+        "space_items": false,
+        "stack_collections": true,
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "circle_button_background": "#ffffff",
+        "circle_button_text_color": "#1c1c1c"
+      }
+    },
+    "featured_collections_QtNRx9": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_faxmdG": {
+          "type": "collection",
+          "settings": {
+            "collection": "mais-vendidos",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_faxmdG"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_tAwkiy": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_CzKa4P": {
+          "type": "collection",
+          "settings": {
+            "collection": "aneis",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "Explore Mais"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CzKa4P"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_EXXg4Y": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_M9TE6g": {
+          "type": "collection",
+          "settings": {
+            "collection": "mix-match",
+            "products_count": 8,
+            "title": "",
+            "link_url": "shopify://collections/mix-match",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_M9TE6g"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_KfYgFT": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_XgHk47": {
+          "type": "collection",
+          "settings": {
+            "collection": "colar",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_XgHk47"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_eqQry9": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_kBVNtk": {
+          "type": "collection",
+          "settings": {
+            "collection": "brinco",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_kBVNtk"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "image_with_text_Kw7dH3": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_c9m76K": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_dJbHW6": {
+          "type": "heading",
+          "settings": {
+            "text": "about us",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_DWCyUF": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h6>A moda é uma forma de expressão, uma maneira de nos apresentarmos ao mundo antes mesmo de dizer uma palavra.<br/><br/>Os acessórios proporcionam a liberdade para sermos criativos e adicionarmos personalidade a qualquer produção. Eles são elementos que podem transmitir nosso humor, sentimentos e confiança para o mundo ao nosso redor.<br/><br/>Bem-vindos à Itzzy, by Victoria Carvalho, onde celebramos o que nos torna únicos e mostramos quem realmente somos.</h6>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_c9m76K",
+        "heading_dJbHW6",
+        "richtext_DWCyUF"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Fotos_Still_-_Itzzy_323c5085-e95d-48cc-a829-135a9d2f0899.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "md",
+        "remove_vertical_spacing": true
+      }
+    },
+    "slideshow_cHccbU": {
+      "type": "slideshow",
+      "blocks": {
+        "image_xhjyxy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_pc_1560_x_500_px_1.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_xhjyxy"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "collection-list",
+    "featured_collections_QtNRx9",
+    "featured_collections_tAwkiy",
+    "featured_collections_EXXg4Y",
+    "featured_collections_KfYgFT",
+    "featured_collections_eqQry9",
+    "image_with_text_Kw7dH3",
+    "slideshow_cHccbU"
+  ]
+}

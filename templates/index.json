@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "collection": "colar",
-            "image": "shopify://shop_images/Itzzy_site_3.png",
+            "image": "shopify://shop_images/3.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",

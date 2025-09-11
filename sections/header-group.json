@@ -65,6 +65,7 @@
         "enable_sticky": true,
         "show_separation_border": true,
         "reduce_padding": false,
+        "logo": "shopify://shop_images/VERMELHA.png",
         "logo_max_width": 140,
         "logo_mobile_max_width": 100,
         "menu": "main-menu",

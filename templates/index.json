@@ -85,24 +85,6 @@
     "collection-list": {
       "type": "collection-list",
       "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "brinco",
-            "image": "shopify://shop_images/21_cd13a4ef-9b5e-4800-af73-f2219ca1f9e8.png",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
-            "subheading": "",
-            "title": "",
-            "button_text": "Brincos",
-            "button_link": "",
-            "text_color": "#ffe6e2",
-            "overlay_color": "#930011",
-            "overlay_opacity": 0,
-            "button_background": "#930011",
-            "button_text_color": "#ffe6e2"
-          }
-        },
         "collection-2": {
           "type": "collection",
           "settings": {
@@ -138,12 +120,30 @@
             "button_background": "#930011",
             "button_text_color": "#ffe6e2"
           }
+        },
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "brinco",
+            "image": "shopify://shop_images/21_cd13a4ef-9b5e-4800-af73-f2219ca1f9e8.png",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Brincos",
+            "button_link": "",
+            "text_color": "#ffe6e2",
+            "overlay_color": "#930011",
+            "overlay_opacity": 0,
+            "button_background": "#930011",
+            "button_text_color": "#ffe6e2"
+          }
         }
       },
       "block_order": [
-        "collection-1",
         "collection-2",
-        "collection-3"
+        "collection-3",
+        "collection-1"
       ],
       "custom_css": [
         "{margin-top: 1%;}"

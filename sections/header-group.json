@@ -65,7 +65,6 @@
         "enable_sticky": true,
         "show_separation_border": true,
         "reduce_padding": false,
-        "logo": "shopify://shop_images/24_a8840457-0d85-47ec-853b-83a14ba5c61e.png",
         "logo_max_width": 140,
         "logo_mobile_max_width": 100,
         "menu": "main-menu",

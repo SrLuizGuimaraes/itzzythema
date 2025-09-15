@@ -42,15 +42,15 @@
         "image_PXM4YW": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_pc_5dc3e428-38d8-4f8b-a880-f7895ba91abe.png",
-            "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_019f04bc-cfbc-4c62-a5e9-a33f7e5a1ef3.jpg",
+            "image": "shopify://shop_images/Banner_pc_d8c628d8-64f8-4852-8eeb-809d6259fdff.png",
+            "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_9df57cd4-663c-4fbe-b034-4092ccd949ad.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 1200,
             "button_1_text": "",
-            "button_1_link": "shopify://collections/mix-match",
+            "button_1_link": "shopify://collections/semana-do-cliente",
             "button_1_style": "solid",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",

@@ -1,23 +1,19 @@
 {%- comment -%}
-----------------------------------------------------------------------------------------------------------------------
-PRODUCT INVENTORY COMPONENT
-----------------------------------------------------------------------------------------------------------------------
-
-This component is used to display the inventory of a given product
-
-********************************************
-Supported variables
-********************************************
-
-* product: the product from which the inventory is extracted (if none is set, a placeholder is rendered)
-* show_in_stock_quantity: decide if the quantity in stock is shown or not
-* low_threshold: the inventory quantity threshold below which the inventory is shown as "red"
-* show_progress_bar: if true, a progress bar is added
-* progress_bar_max_value: the value used as a max value to calculate the progress advancement
-* form_id: if specified, define the form ID linked to this input
+  @param product {Object}
+    O produto a ser analisado.
+  @param form_id {String}
+    O ID do formulário do produto associado.
+  @param show_in_stock_quantity {Boolean}
+    Se deve mostrar a quantidade quando em estoque.
+  @param low_threshold {Number}
+    O limite para estoque baixo.
+  @param show_progress_bar {Boolean}
+    Se deve mostrar a barra de progresso.
+  @param progress_bar_max_value {Number}
+    O valor máximo para a barra de progresso.
 {%- endcomment -%}
 
-{%- capture inventory_for_variants -%}
+%- capture inventory_for_variants -%}
   {%- assign inventory_default_status = '' -%}
   {%- assign inventory_default_quantity = '' -%}
 
@@ -42,7 +38,11 @@ Supported variables
               assign inventory_status = 'success'
 
               if show_in_stock_quantity and variant.inventory_management
-                assign inventory_text = 'product.inventory.in_stock_with_quantity_count' | t: count: variant.inventory_quantity
+                if variant.inventory_quantity > 5
+                  assign inventory_text = 'product.inventory.in_stock_with_quantity_count' | t: count: '5+'
+                else
+                  assign inventory_text = 'product.inventory.in_stock_with_quantity_count' | t: count: variant.inventory_quantity
+                endif
               else
                 assign inventory_text = 'product.inventory.in_stock' | t
               endif
@@ -86,7 +86,7 @@ Supported variables
       {%- endif -%}
     </span>
   {%- endif -%}
-{%- endcapture -%}
+
 
 {%- if inventory_for_variants != blank -%}
   <variant-inventory class="inventory text-{{ inventory_default_status }}" {% if form_id %}form="{{ form_id }}"{% endif %}>

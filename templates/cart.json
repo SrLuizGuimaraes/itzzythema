@@ -1,1 +1,44 @@
-{"sections":{"main":{"type":"main-cart","settings":{"show_cart_note":false,"show_order_weight":false,"show_shipping_text":false,"show_accelerated_buttons":false,"show_shipping_estimator":false}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "blocks": {
+        "essential_upsell_frequently_bought_together_app_block_KarHzT": {
+          "type": "shopify://apps/essential-upsell/blocks/frequently-bought-together-app-block/50627fd9-24fd-4250-8614-accc12826d80",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "essential_upsell_frequently_bought_together_app_block_KarHzT"
+      ],
+      "settings": {
+        "show_cart_note": false,
+        "show_order_weight": false,
+        "show_shipping_text": false,
+        "show_accelerated_buttons": false,
+        "show_shipping_estimator": false
+      }
+    },
+    "17580759429f1b8bc5": {
+      "type": "apps",
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17580759429f1b8bc5"
+  ]
+}

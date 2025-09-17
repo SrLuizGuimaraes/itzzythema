@@ -65,6 +65,11 @@
         "type": "shopify://apps/upsell-app-by-essentialwolf/blocks/app-embed/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
         "disabled": false,
         "settings": {}
+      },
+      "11128031370435530746": {
+        "type": "shopify://apps/cro-cart-drawer-free-gifts/blocks/app-embed/285be1af-7782-4800-bed8-6f91aa670a88",
+        "disabled": false,
+        "settings": {}
       }
     }
   },

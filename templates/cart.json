@@ -11,15 +11,6 @@
   "sections": {
     "main": {
       "type": "main-cart",
-      "blocks": {
-        "essential_upsell_app_block_Y8VM6U": {
-          "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "essential_upsell_app_block_Y8VM6U"
-      ],
       "settings": {
         "show_cart_note": false,
         "show_order_weight": false,

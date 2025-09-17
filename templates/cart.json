@@ -12,13 +12,13 @@
     "main": {
       "type": "main-cart",
       "blocks": {
-        "essential_upsell_frequently_bought_together_app_block_KarHzT": {
-          "type": "shopify://apps/essential-upsell/blocks/frequently-bought-together-app-block/50627fd9-24fd-4250-8614-accc12826d80",
+        "essential_upsell_app_block_Y8VM6U": {
+          "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
           "settings": {}
         }
       },
       "block_order": [
-        "essential_upsell_frequently_bought_together_app_block_KarHzT"
+        "essential_upsell_app_block_Y8VM6U"
       ],
       "settings": {
         "show_cart_note": false,

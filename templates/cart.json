@@ -21,7 +21,8 @@
         "upsell_app_by_essentialwolf_app_block_kXALYe"
       ],
       "custom_css": [
-        ".upsell_brand {display: none !important;}"
+        ".upsell_brand {display: none !important;}",
+        ".upsell-slide-add-cart-btn {/* Cores */ background-color: #d11e29 !important; /* Cor vermelha do botão CHECKOUT */ border-color: #d11e29 !important; /* Fonte e Texto */ color: #ffffff !important; text-transform: uppercase !important; font-weight: 700 !important; /* Exemplo de peso da fonte */}"
       ],
       "settings": {
         "separate_section_with_border": true,

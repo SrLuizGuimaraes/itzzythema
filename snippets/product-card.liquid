@@ -130,6 +130,14 @@ Supported variables
             {%- if show_prices -%}
               {%- render 'price-list', product: product, context: 'card' -%}
             {%- endif -%}
+            {% assign pix_price = product.price | times: 0.95 %}
+{% assign installment = product.price | divided_by: 3 %}
+
+<div class="ProductItem__PaymentInfo" style="font-size:13px; color:#444; line-height:1.4;">
+  <p>R$ {{ pix_price | money_without_trailing_zeros }} com Pix</p>
+  <p>3x de {{ installment | money_without_trailing_zeros }} sem juros</p>
+</div>
+
           </div>
         {%- endif -%}
       </div>

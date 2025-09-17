@@ -12,12 +12,17 @@
     "17580772530b47d593": {
       "type": "apps",
       "blocks": {
+        "essential_upsell_frequently_bought_together_app_block_e63RnA": {
+          "type": "shopify://apps/essential-upsell/blocks/frequently-bought-together-app-block/50627fd9-24fd-4250-8614-accc12826d80",
+          "settings": {}
+        },
         "essential_upsell_app_block_8pQ6Uc": {
           "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
           "settings": {}
         }
       },
       "block_order": [
+        "essential_upsell_frequently_bought_together_app_block_e63RnA",
         "essential_upsell_app_block_8pQ6Uc"
       ],
       "settings": {

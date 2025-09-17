@@ -14,15 +14,14 @@
       "blocks": {
         "essential_upsell_app_block_bRNKCL": {
           "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
+          "name": "Oferta da página do carrinho",
           "settings": {}
         }
       },
       "block_order": [
         "essential_upsell_app_block_bRNKCL"
       ],
-      "custom_css": [
-        "@media screen and (max-width: 768px) {{display: none; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "separate_section_with_border": false,
         "remove_vertical_spacing": true,
@@ -47,28 +46,10 @@
         "show_accelerated_buttons": false,
         "show_shipping_estimator": false
       }
-    },
-    "1758079008a0387e2c": {
-      "type": "apps",
-      "blocks": {
-        "essential_upsell_product_addon_app_block_G6rEWL": {
-          "type": "shopify://apps/essential-upsell/blocks/product-addon-app-block/50627fd9-24fd-4250-8614-accc12826d80",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "essential_upsell_product_addon_app_block_G6rEWL"
-      ],
-      "settings": {
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false
-      }
     }
   },
   "order": [
     "17580772530b47d593",
-    "main",
-    "1758079008a0387e2c"
+    "main"
   ]
 }

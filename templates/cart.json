@@ -11,15 +11,6 @@
   "sections": {
     "main": {
       "type": "main-cart",
-      "blocks": {
-        "upsell_app_by_essentialwolf_app_block_cyT7mx": {
-          "type": "shopify://apps/upsell-app-by-essentialwolf/blocks/app-block/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "upsell_app_by_essentialwolf_app_block_cyT7mx"
-      ],
       "settings": {
         "show_cart_note": false,
         "show_order_weight": false,
@@ -27,9 +18,30 @@
         "show_accelerated_buttons": false,
         "show_shipping_estimator": false
       }
+    },
+    "17581481069c701b2d": {
+      "type": "apps",
+      "blocks": {
+        "upsell_app_by_essentialwolf_app_block_kXALYe": {
+          "type": "shopify://apps/upsell-app-by-essentialwolf/blocks/app-block/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "upsell_app_by_essentialwolf_app_block_kXALYe"
+      ],
+      "custom_css": [
+        "upsell_brand {display: flex;align-items: center;justify-content: center;margin-top: -5px;display: none;}"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "17581481069c701b2d"
   ]
 }

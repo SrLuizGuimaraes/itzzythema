@@ -31,9 +31,9 @@
         "essential_upsell_app_block_HBVaqy"
       ],
       "settings": {
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true
       }
     }
   },

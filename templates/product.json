@@ -1,1 +1,221 @@
-{"sections":{"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{"heading_tag":"h3"}},"price":{"type":"price","settings":{"show_taxes_notice":false}},"liquid_jwtGYz":{"type":"liquid","settings":{"liquid":"<!-- INICIO - SCRIPT DE PARCELAMENTO SEM JUROS H2B --> \n<style>.parcelamento {font-size:14px;} .tabela {display: flex; justify-content: space-between; align-items: center; margin-top: 10px; margin-bottom: 10px;} .price {font-size: 20px !important;}<\/style>\n<link rel=\"stylesheet\" href=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/4.7.0\/css\/font-awesome.min.css\">\n           \n<div>\n  <div class=\"tabela\">\n    <div><p class=\"parcelamento\"><i class=\"fa fa-credit-card\"><\/i> Em até 3x de <span style=\"font-size:20px; color: black;\"><b>{{ product.price | divided_by: 3| money }}<\/b><\/span> Sem Juros<\/p><\/div>\n  <\/div>\n<\/div>   \n<!-- FIM - SCRIPT DE PARCELAMENTO SEM JUROS H2B -->"}},"inventory_UqQJdQ":{"type":"inventory","settings":{"show_in_stock_quantity":true,"low_inventory_threshold":5,"show_progress_bar":false,"progress_bar_max_value":50}},"variant_picker":{"type":"variant_picker","settings":{"hide_sold_out_variants":false,"selector_type":"block","color_selector_type":"block","size_chart_page":""}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_payment_button":false,"show_gift_card_recipient":false,"atc_button_background":"","atc_button_text_color":"","payment_button_background":"","payment_button_text_color":""}},"separator":{"type":"separator","settings":{}},"description":{"type":"description","settings":{"collapse_content":false,"show_below_gallery":false}}},"block_order":["title","price","liquid_jwtGYz","inventory_UqQJdQ","variant_picker","quantity_selector","buy_buttons","separator","description"],"settings":{"container_size":"lg","product_info_size":35,"show_sticky_add_to_cart":true,"center_basic_info":false,"desktop_media_layout":"grid","desktop_media_grid_gap":30,"mobile_controls":"dots","enable_media_autoplay":false,"enable_video_looping":true,"enable_image_zoom":true,"max_image_zoom_level":3}},"media_grid_BYWBkF":{"type":"media-grid","blocks":{"image_P9r7wU":{"type":"image","settings":{"image":"{{ product.metafields.custom.review1.value }}","column_count":"4","row_count":2,"title":"","heading_tag":"h4","content":"","link_text":"","link_url":"","link_style":"link","text_position":"place-self-center text-center","text_color":"#ffffff","button_background":"","button_text_color":"","overlay_color":"#000000","overlay_opacity":0}},"image_7KprCE":{"type":"image","settings":{"image":"{{ product.metafields.custom.review.value }}","column_count":"4","row_count":2,"title":"","heading_tag":"h4","content":"","link_text":"","link_url":"","link_style":"link","text_position":"place-self-center text-center","text_color":"#ffffff","button_background":"","button_text_color":"","overlay_color":"#000000","overlay_opacity":0}},"image_Xt4Mmq":{"type":"image","settings":{"image":"{{ product.metafields.custom.review3.value }}","column_count":"4","row_count":2,"title":"","heading_tag":"h4","content":"","link_text":"","link_url":"","link_style":"link","text_position":"place-self-center text-center","text_color":"#ffffff","button_background":"","button_text_color":"","overlay_color":"#000000","overlay_opacity":0}}},"block_order":["image_P9r7wU","image_7KprCE","image_Xt4Mmq"],"custom_css":[".media-grid:has(img) + .h2 {display: block; \/* Mostra o texto se houver imagem *\/}",".media-grid:not(:has(img)) + .h2 {display: none; \/* Esconde o texto se não houver imagem *\/}",".media-grid:has(img) {display: grid; gap: 10px; \/* Exibe o elemento se houver imagem *\/}",".media-grid:not(:has(img)) {display: none; \/* Oculta o elemento se não houver imagem *\/}"],"settings":{"separate_section_with_border":true,"desktop_row_height":180,"mobile_row_height":180,"section_width":"md","spacing":"none","subheading":"","title":"Elas usam","content":"","background":"","text_color":""}},"related-products":{"type":"related-products","settings":{"separate_section_with_border":true,"hide_product_information":false,"stack_products":false,"recommendations_count":10,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":"","title":"Produtos relacionados","content":""}}},"order":["main","media_grid_BYWBkF","related-products"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "liquid_jwtGYz": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<!-- INICIO - SCRIPT DE PARCELAMENTO SEM JUROS H2B --> \n<style>.parcelamento {font-size:14px;} .tabela {display: flex; justify-content: space-between; align-items: center; margin-top: 10px; margin-bottom: 10px;} .price {font-size: 20px !important;}</style>\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n           \n<div>\n  <div class=\"tabela\">\n    <div><p class=\"parcelamento\"><i class=\"fa fa-credit-card\"></i> Em até 3x de <span style=\"font-size:20px; color: black;\"><b>{{ product.price | divided_by: 3| money }}</b></span> Sem Juros</p></div>\n  </div>\n</div>   \n<!-- FIM - SCRIPT DE PARCELAMENTO SEM JUROS H2B -->"
+          }
+        },
+        "liquid_MQwJM3": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style>\n.parcelamento {\n  font-size:14px;\n}\n.tabela {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n.price {\n  font-size: 20px !important;\n}\n</style>\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n         \n<div>\n  {% assign pix_price = product.price | times: 0.95 | round: 2 %}\n  <div class=\"tabela\">\n    <div>\n      <p class=\"parcelamento\">\n        <i class=\"fa fa-qrcode\"></i> <span style=\"font-size:20px; color: black;\"><b>{{ pix_price | money }}</b></span> à vista no Pix\n      </p>\n    </div>\n  </div>\n\n  <div class=\"tabela\">\n    <div>\n      <p class=\"parcelamento\">\n        <i class=\"fa fa-credit-card\"></i> Em até 3x de <span style=\"font-size:20px; color: black;\"><b>{{ product.price | divided_by: 3 | money }}</b></span> Sem Juros\n      </p>\n    </div>\n  </div>\n</div>"
+          }
+        },
+        "inventory_UqQJdQ": {
+          "type": "inventory",
+          "settings": {
+            "show_in_stock_quantity": true,
+            "low_inventory_threshold": 5,
+            "show_progress_bar": false,
+            "progress_bar_max_value": 50
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_type": "block",
+            "color_selector_type": "block",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "liquid_jwtGYz",
+        "liquid_MQwJM3",
+        "inventory_UqQJdQ",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "separator",
+        "description"
+      ],
+      "settings": {
+        "container_size": "lg",
+        "product_info_size": 35,
+        "show_sticky_add_to_cart": true,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
+      }
+    },
+    "media_grid_BYWBkF": {
+      "type": "media-grid",
+      "blocks": {
+        "image_P9r7wU": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.review1.value }}",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "button_background": "",
+            "button_text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_7KprCE": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.review.value }}",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "button_background": "",
+            "button_text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_Xt4Mmq": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.review3.value }}",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "button_background": "",
+            "button_text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_P9r7wU",
+        "image_7KprCE",
+        "image_Xt4Mmq"
+      ],
+      "custom_css": [
+        ".media-grid:has(img) + .h2 {display: block; /* Mostra o texto se houver imagem */}",
+        ".media-grid:not(:has(img)) + .h2 {display: none; /* Esconde o texto se não houver imagem */}",
+        ".media-grid:has(img) {display: grid; gap: 10px; /* Exibe o elemento se houver imagem */}",
+        ".media-grid:not(:has(img)) {display: none; /* Oculta o elemento se não houver imagem */}"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "desktop_row_height": 180,
+        "mobile_row_height": 180,
+        "section_width": "md",
+        "spacing": "none",
+        "subheading": "",
+        "title": "Elas usam",
+        "content": "",
+        "background": "",
+        "text_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "recommendations_count": 10,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "title": "Produtos relacionados",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "media_grid_BYWBkF",
+    "related-products"
+  ]
+}

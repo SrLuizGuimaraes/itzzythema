@@ -11,6 +11,15 @@
   "sections": {
     "main": {
       "type": "main-cart",
+      "blocks": {
+        "essential_upsell_app_block_BJqd3E": {
+          "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "essential_upsell_app_block_BJqd3E"
+      ],
       "settings": {
         "show_cart_note": false,
         "show_order_weight": false,
@@ -18,27 +27,9 @@
         "show_accelerated_buttons": false,
         "show_shipping_estimator": false
       }
-    },
-    "1758077229d1332915": {
-      "type": "apps",
-      "blocks": {
-        "essential_upsell_app_block_HBVaqy": {
-          "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "essential_upsell_app_block_HBVaqy"
-      ],
-      "settings": {
-        "separate_section_with_border": false,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": true
-      }
     }
   },
   "order": [
-    "main",
-    "1758077229d1332915"
+    "main"
   ]
 }

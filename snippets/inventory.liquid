@@ -46,6 +46,7 @@ Supported variables
   if displayed_quantity > 5
     assign displayed_quantity = 5
   endif
+assign inventory_text = 'product.inventory.in_stock_with_quantity_count' | t: count: displayed_quantity
               else
                 assign inventory_text = 'product.inventory.in_stock' | t
               endif

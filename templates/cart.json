@@ -12,36 +12,22 @@
     "17580772530b47d593": {
       "type": "apps",
       "blocks": {
-        "essential_upsell_frequently_bought_together_app_block_e63RnA": {
-          "type": "shopify://apps/essential-upsell/blocks/frequently-bought-together-app-block/50627fd9-24fd-4250-8614-accc12826d80",
-          "settings": {}
-        },
-        "essential_upsell_app_block_8pQ6Uc": {
+        "essential_upsell_app_block_bRNKCL": {
           "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
           "settings": {}
         }
       },
       "block_order": [
-        "essential_upsell_frequently_bought_together_app_block_e63RnA",
-        "essential_upsell_app_block_8pQ6Uc"
+        "essential_upsell_app_block_bRNKCL"
       ],
       "settings": {
         "separate_section_with_border": false,
         "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": true
+        "remove_horizontal_spacing": false
       }
     },
     "main": {
       "type": "main-cart",
-      "blocks": {
-        "essential_upsell_app_block_6r9LMt": {
-          "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "essential_upsell_app_block_6r9LMt"
-      ],
       "settings": {
         "show_cart_note": false,
         "show_order_weight": false,

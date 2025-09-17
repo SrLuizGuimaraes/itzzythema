@@ -134,10 +134,10 @@ Supported variables
 {% assign installment = product.price | divided_by: 3 %}
 
 <div class="ProductItem__PaymentInfo">
-  <p class="ProductItem__Price" style="font-size:10px;">
+  <p class="ProductItem__Price" style="font-size:12px;">
     {{ pix_price | money_without_trailing_zeros }} com Pix
   </p>
-  <p class="ProductItem__Price" style="font-size:10px;">
+  <p class="ProductItem__Price" style="font-size:12px;">
     3x de {{ installment | money_without_trailing_zeros }} sem juros
   </p>
 </div>

@@ -56,19 +56,14 @@
         "disabled": false,
         "settings": {}
       },
-      "144831480468751239": {
-        "type": "shopify://apps/essential-upsell/blocks/app-embed/50627fd9-24fd-4250-8614-accc12826d80",
-        "disabled": false,
-        "settings": {}
-      },
       "10553572162545005813": {
         "type": "shopify://apps/upsell-app-by-essentialwolf/blocks/app-embed/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
         "disabled": false,
         "settings": {}
       },
-      "9987108931664557417": {
-        "type": "shopify://apps/ea-upsell-offers/blocks/app-embed-block/1b9209bc-699e-4ddf-8036-d2d15e654819",
-        "disabled": false,
+      "144831480468751239": {
+        "type": "shopify://apps/essential-upsell/blocks/app-embed/50627fd9-24fd-4250-8614-accc12826d80",
+        "disabled": true,
         "settings": {}
       }
     }

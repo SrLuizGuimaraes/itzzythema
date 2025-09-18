@@ -66,9 +66,9 @@
         "disabled": false,
         "settings": {}
       },
-      "11128031370435530746": {
-        "type": "shopify://apps/cro-cart-drawer-free-gifts/blocks/app-embed/285be1af-7782-4800-bed8-6f91aa670a88",
-        "disabled": true,
+      "9987108931664557417": {
+        "type": "shopify://apps/ea-upsell-offers/blocks/app-embed-block/1b9209bc-699e-4ddf-8036-d2d15e654819",
+        "disabled": false,
         "settings": {}
       }
     }

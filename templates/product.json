@@ -123,10 +123,28 @@
         "title": "Produtos relacionados",
         "content": ""
       }
+    },
+    "175839008559e52c43": {
+      "type": "apps",
+      "blocks": {
+        "zotasell_ai_upsell_cross_sell_upsell_detail_page_dnxXDy": {
+          "type": "shopify://apps/zotasell-ai-upsell-cross-sell/blocks/upsell-detail-page/29660b22-f312-48b7-a61d-7f1eb7b9f7a2",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "zotasell_ai_upsell_cross_sell_upsell_detail_page_dnxXDy"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "175839008559e52c43"
   ]
 }

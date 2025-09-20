@@ -61,10 +61,13 @@
         "disabled": false,
         "settings": {}
       },
-      "6900241583772215024": {
-        "type": "shopify://apps/zotasell-ai-upsell-cross-sell/blocks/zotabox_embed/29660b22-f312-48b7-a61d-7f1eb7b9f7a2",
-        "disabled": true,
-        "settings": {}
+      "10003540932433742857": {
+        "type": "shopify://apps/addly-bundle-upsell/blocks/addly-embed/ba93f155-a558-4082-82dd-21b22b27b698",
+        "disabled": false,
+        "settings": {
+          "n9_embed_css": "/* CSS Rules */",
+          "n9_embed_js": "/* JS Code */"
+        }
       }
     }
   },

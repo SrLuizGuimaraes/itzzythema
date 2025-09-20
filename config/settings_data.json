@@ -61,9 +61,9 @@
         "disabled": false,
         "settings": {}
       },
-      "144831480468751239": {
-        "type": "shopify://apps/essential-upsell/blocks/app-embed/50627fd9-24fd-4250-8614-accc12826d80",
-        "disabled": true,
+      "6900241583772215024": {
+        "type": "shopify://apps/zotasell-ai-upsell-cross-sell/blocks/zotabox_embed/29660b22-f312-48b7-a61d-7f1eb7b9f7a2",
+        "disabled": false,
         "settings": {}
       }
     }

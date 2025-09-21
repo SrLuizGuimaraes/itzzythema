@@ -5,7 +5,8 @@
 
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
-  assign all_shop_products = all_products
+  assign all_shop_products = collections['all'].products | slice: 0, 100
+
   assign candidate_products = ''
 
   for product in all_shop_products

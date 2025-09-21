@@ -1,6 +1,6 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
-  assign collection_handles = "brincos,colares,aneis" | split: ","
+  assign collection_handles = "brinco,colar,aneis" | split: ","
   assign max_products_to_display = 3
   assign displayed_products_count = 0
   assign shown_ids = ''

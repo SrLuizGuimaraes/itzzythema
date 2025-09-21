@@ -41,14 +41,6 @@
         "show_shipping_estimator": false
       }
     },
-    "17583901186ec74a54": {
-      "type": "apps",
-      "settings": {
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false
-      }
-    },
     "upsell_products_zUF394": {
       "type": "upsell-products",
       "name": "Upsell Products",
@@ -61,12 +53,20 @@
         "button_text_color": "#ffffff",
         "font_family": "inherit"
       }
+    },
+    "17583901186ec74a54": {
+      "type": "apps",
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
     }
   },
   "order": [
+    "upsell_products_zUF394",
     "17581481069c701b2d",
     "main",
-    "17583901186ec74a54",
-    "upsell_products_zUF394"
+    "17583901186ec74a54"
   ]
 }

@@ -9,6 +9,38 @@
 
 {% if cart.item_count > 0 %}
 <section class="upsell-products-section">
+  <style>
+    .upsell-carousel {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+    }
+
+    .upsell-product-card {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      min-width: calc(50% - 8px);
+      box-sizing: border-box;
+    }
+
+    @media screen and (min-width: 768px) {
+      .upsell-carousel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 24px;
+        overflow-x: unset;
+      }
+
+      .upsell-product-card {
+        min-width: unset;
+        scroll-snap-align: unset;
+      }
+    }
+  </style>
+
   <div class="upsell-products-container">
     <div class="upsell-header" style="font-family: {{ section.settings.font_family }}">
       <h3 class="upsell-title">{{ section.settings.title }}</h3>
@@ -108,7 +140,6 @@
   </div>
 </section>
 {% endif %}
-
 {% schema %}
 {
   "name": "Upsell no Carrinho",

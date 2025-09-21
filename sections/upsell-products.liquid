@@ -10,6 +10,8 @@
 
   assign random_seed = 'now' | date: '%s' | modulo: 1000
   assign start_index = random_seed | modulo: candidate_products.size
+
+  assign used_collections = ''
 -%}
 
 {% if candidate_products.size > 0 and cart.item_count > 0 %}
@@ -31,10 +33,19 @@
 
           assign current_index = start_index | plus: i | modulo: candidate_products.size
           assign upsell_product = candidate_products[current_index]
+
+          if upsell_product
+            assign first_collection = upsell_product.collections | first | default: ''
+            unless used_collections contains first_collection
+              assign used_collections = used_collections | append: ',' | append: first_collection
+              assign displayed_products_count = displayed_products_count | plus: 1
+            else
+              continue
+            endunless
+          endif
         -%}
 
         {% if upsell_product %}
-          {%- liquid assign displayed_products_count = displayed_products_count | plus: 1 -%}
           <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
             <div class="upsell-product-image">
               <a href="{{ upsell_product.url }}" class="upsell-product-link">

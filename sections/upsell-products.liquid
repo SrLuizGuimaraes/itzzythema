@@ -1,7 +1,7 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
   assign collection_handles = "aneis,mais-vendidos,mix-match,brinco,colar,pulseiras" | split: ","
-  assign max_products_to_display = 6
+  assign max_products_to_display = section.settings.max_products | default: 6
   assign displayed_products_count = 0
   assign shown_ids = ''
   assign random_seed = 'now' | date: '%s' | modulo: 1000
@@ -10,8 +10,11 @@
 {% if cart.item_count > 0 %}
 <section class="upsell-products-section">
   <div class="upsell-products-container">
-    <div class="upsell-header">
-      <h3 class="upsell-title">Você também pode gostar</h3>
+    <div class="upsell-header" style="font-family: {{ section.settings.font_family }}">
+      <h3 class="upsell-title">{{ section.settings.title }}</h3>
+      {% if section.settings.subtitle != blank %}
+        <p class="upsell-subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
     </div>
 
     <div class="upsell-products-grid">
@@ -58,7 +61,7 @@
               </a>
             </div>
 
-            <div class="upsell-product-info">
+            <div class="upsell-product-info" style="font-family: {{ section.settings.font_family }}">
               <h4 class="upsell-product-title">
                 <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
               </h4>
@@ -66,17 +69,17 @@
               <div class="upsell-product-price">
                 {% if upsell_product.compare_at_price > upsell_product.price %}
                   <span class="upsell-price-compare">{{ upsell_product.compare_at_price | money }}</span>
-                  <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
-                {% else %}
-                  <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
                 {% endif %}
+                <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
               </div>
 
               {% if upsell_product.variants.size == 1 %}
                 <form method="post" action="/cart/add">
                   <input type="hidden" name="id" value="{{ upsell_product.selected_or_first_available_variant.id }}">
-                  <button type="submit" class="btn btn-primary">
-                    Adicionar ao Carrinho
+                  <button type="submit"
+                          class="btn btn-primary"
+                          style="background-color: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }}; font-family: {{ section.settings.font_family }}">
+                    {{ section.settings.button_text }}
                   </button>
                 </form>
               {% else %}
@@ -90,8 +93,10 @@
                       {% endif %}
                     {% endfor %}
                   </select>
-                  <button type="submit" class="btn btn-primary">
-                    Adicionar ao Carrinho
+                  <button type="submit"
+                          class="btn btn-primary"
+                          style="background-color: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }}; font-family: {{ section.settings.font_family }}">
+                    {{ section.settings.button_text }}
                   </button>
                 </form>
               {% endif %}

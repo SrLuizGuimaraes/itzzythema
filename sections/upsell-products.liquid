@@ -1,20 +1,21 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
   assign all_shop_products = collections['all'].products
-
   assign candidate_products = all_shop_products | where: "available", true
   assign candidate_products = candidate_products | reject: "id", cart_product_ids
-
+  assign candidate_size = candidate_products.size
   assign max_products_to_display = 3
   assign displayed_products_count = 0
-  assign used_collections = ''
-  assign displayed_handles = ''
+  assign shown_ids = ''
+  assign start_index = 0
 
-  assign random_seed = 'now' | date: '%s' | modulo: 1000
-  assign start_index = random_seed | modulo: candidate_products.size
+  if candidate_size > 0
+    assign random_seed = 'now' | date: '%s' | modulo: 1000
+    assign start_index = random_seed | modulo: candidate_size
+  endif
 -%}
 
-{% if candidate_products.size > 0 and cart.item_count > 0 %}
+{% if candidate_size > 0 and cart.item_count > 0 %}
 <section class="upsell-products-section" data-section-id="{{ section.id }}">
   <div class="upsell-products-container">
     <div class="upsell-header">
@@ -25,94 +26,101 @@
     </div>
 
     <div class="upsell-products-grid">
-      {% for i in (0..candidate_products.size) %}
+      {% for i in (0..20) %}
         {%- liquid
           if displayed_products_count >= max_products_to_display
             break
           endif
 
-          assign current_index = start_index | plus: i | modulo: candidate_products.size
+          assign current_index = start_index | plus: i | modulo: candidate_size
           assign upsell_product = candidate_products[current_index]
 
-          if upsell_product
-            assign first_collection = upsell_product.collections | first
-            if first_collection and used_collections contains first_collection.handle
-              assign skip = true
-            else
-              assign skip = false
-            endif
+          if shown_ids contains upsell_product.id
+            continue
           endif
+
+          assign shown_ids = shown_ids | append: upsell_product.id | append: ','
+          assign displayed_products_count = displayed_products_count | plus: 1
         -%}
 
-        {% if upsell_product and skip == false %}
-          {%- liquid
-            assign displayed_products_count = displayed_products_count | plus: 1
-            if first_collection
-              assign used_collections = used_collections | append: ',' | append: first_collection.handle
-            endif
-          -%}
-
-          <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
-            <div class="upsell-product-image">
-              <a href="{{ upsell_product.url }}" class="upsell-product-link">
-                {% if upsell_product.featured_image %}
-                  <img 
-                    src="{{ upsell_product.featured_image | image_url: width: 300 }}"
-                    alt="{{ upsell_product.featured_image.alt | default: upsell_product.title }}"
-                    loading="lazy"
-                    width="300"
-                    height="300"
-                  >
-                {% else %}
-                  <div class="upsell-product-placeholder">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                      <circle cx="8.5" cy="8.5" r="1.5"/>
-                      <polyline points="21,15 16,10 5,21"/>
-                    </svg>
-                  </div>
-                {% endif %}
-              </a>
-            </div>
-
-            <div class="upsell-product-info">
-              <h4 class="upsell-product-title">
-                <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
-              </h4>
-
-              <div class="upsell-product-price">
-                {% if upsell_product.compare_at_price > upsell_product.price %}
-                  <span class="upsell-price-compare">{{ upsell_product.compare_at_price | money }}</span>
-                  <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
-                {% else %}
-                  <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
-                {% endif %}
-              </div>
-
-              {% if upsell_product.variants.size == 1 %}
-                <button 
-                  type="button" 
-                  class="upsell-add-to-cart btn btn-primary"
-                  data-variant-id="{{ upsell_product.selected_or_first_available_variant.id }}"
-                  data-quantity="1"
-                  {% unless upsell_product.selected_or_first_available_variant.available %}disabled{% endunless %}
-                >
-                  {% if upsell_product.selected_or_first_available_variant.available %}
-                    {{ section.settings.button_text | default: 'Adicionar ao Carrinho' }}
-                  {% else %}
-                    Esgotado
-                  {% endif %}
-                </button>
+        <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
+          <div class="upsell-product-image">
+            <a href="{{ upsell_product.url }}" class="upsell-product-link">
+              {% if upsell_product.featured_image %}
+                <img src="{{ upsell_product.featured_image | image_url: width: 300 }}"
+                     alt="{{ upsell_product.featured_image.alt | default: upsell_product.title }}"
+                     loading="lazy" width="300" height="300">
               {% else %}
-                <a href="{{ upsell_product.url }}" class="upsell-view-product btn btn-secondary">
-                  Ver Produto
-                </a>
+                <div class="upsell-product-placeholder">
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21,15 16,10 5,21"/>
+                  </svg>
+                </div>
+              {% endif %}
+            </a>
+          </div>
+
+          <div class="upsell-product-info">
+            <h4 class="upsell-product-title">
+              <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
+            </h4>
+
+            <div class="upsell-product-price">
+              {% if upsell_product.compare_at_price > upsell_product.price %}
+                <span class="upsell-price-compare">{{ upsell_product.compare_at_price | money }}</span>
+                <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
+              {% else %}
+                <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
               {% endif %}
             </div>
+
+            {% if upsell_product.variants.size == 1 %}
+              <button type="button"
+                      class="upsell-add-to-cart btn btn-primary"
+                      data-variant-id="{{ upsell_product.selected_or_first_available_variant.id }}"
+                      data-quantity="1"
+                      {% unless upsell_product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+                {% if upsell_product.selected_or_first_available_variant.available %}
+                  {{ section.settings.button_text | default: 'Adicionar ao Carrinho' }}
+                {% else %}
+                  Esgotado
+                {% endif %}
+              </button>
+            {% else %}
+              <a href="{{ upsell_product.url }}" class="upsell-view-product btn btn-secondary">Ver Produto</a>
+            {% endif %}
           </div>
-        {% endif %}
+        </div>
       {% endfor %}
     </div>
   </div>
 </section>
 {% endif %}
+
+{% schema %}
+{
+  "name": "Upsell no Carrinho",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Você também pode gostar"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtítulo",
+      "default": "Produtos recomendados para você"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto do botão",
+      "default": "Adicionar ao Carrinho"
+    }
+  ]
+}
+{% endschema %}

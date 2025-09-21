@@ -1,13 +1,14 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
   assign collection_handles = "" | split: ","
-  if section.settings.collection_1 != blank
+
+  if section.settings.collection_1 and section.settings.collection_1.handle
     assign collection_handles = collection_handles | push: section.settings.collection_1.handle
   endif
-  if section.settings.collection_2 != blank
+  if section.settings.collection_2 and section.settings.collection_2.handle
     assign collection_handles = collection_handles | push: section.settings.collection_2.handle
   endif
-  if section.settings.collection_3 != blank
+  if section.settings.collection_3 and section.settings.collection_3.handle
     assign collection_handles = collection_handles | push: section.settings.collection_3.handle
   endif
 
@@ -15,6 +16,7 @@
   assign displayed_products_count = 0
   assign shown_ids = ''
   assign random_seed = 'now' | date: '%s' | modulo: 1000
+  assign collection_count = collection_handles.size
 -%}
 
 {% if cart.item_count > 0 %}
@@ -28,7 +30,7 @@
     </div>
 
     <div class="upsell-products-grid">
-      {% for i in (0..collection_handles.size) %}
+      {% for i in (0..collection_count) %}
         {%- liquid
           if displayed_products_count >= max_products_to_display
             break

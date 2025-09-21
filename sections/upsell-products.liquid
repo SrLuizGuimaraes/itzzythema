@@ -1,31 +1,17 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
-  assign collection_handles = "" | split: ","
-
-  if section.settings.collection_1_handle != blank
-    assign collection_handles = collection_handles | push: section.settings.collection_1_handle
-  endif
-  if section.settings.collection_2_handle != blank
-    assign collection_handles = collection_handles | push: section.settings.collection_2_handle
-  endif
-  if section.settings.collection_3_handle != blank
-    assign collection_handles = collection_handles | push: section.settings.collection_3_handle
-  endif
-
-  assign max_products_to_display = section.settings.max_products | default: 3
+  assign collection_handles = "meninas,meninos,calcados,bolsas,colares,pulseiras" | split: ","
+  assign max_products_to_display = 6
   assign displayed_products_count = 0
   assign shown_ids = ''
   assign random_seed = 'now' | date: '%s' | modulo: 1000
 -%}
 
 {% if cart.item_count > 0 %}
-<section class="upsell-products-section" data-section-id="{{ section.id }}">
+<section class="upsell-products-section">
   <div class="upsell-products-container">
-    <div class="upsell-header" style="font-family: {{ section.settings.font_family }}">
-      <h3 class="upsell-title">{{ section.settings.title }}</h3>
-      {% if section.settings.subtitle != blank %}
-        <p class="upsell-subtitle">{{ section.settings.subtitle }}</p>
-      {% endif %}
+    <div class="upsell-header">
+      <h3 class="upsell-title">Você também pode gostar</h3>
     </div>
 
     <div class="upsell-products-grid">
@@ -55,7 +41,7 @@
 
           <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
             <div class="upsell-product-image">
-              <a href="{{ upsell_product.url }}" class="upsell-product-link">
+              <a href="{{ upsell_product.url }}">
                 {% if upsell_product.featured_image %}
                   <img src="{{ upsell_product.featured_image | image_url: width: 300 }}"
                        alt="{{ upsell_product.featured_image.alt | default: upsell_product.title }}"
@@ -72,7 +58,7 @@
               </a>
             </div>
 
-            <div class="upsell-product-info" style="font-family: {{ section.settings.font_family }}">
+            <div class="upsell-product-info">
               <h4 class="upsell-product-title">
                 <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
               </h4>
@@ -87,18 +73,12 @@
               </div>
 
               {% if upsell_product.variants.size == 1 %}
-                <button type="button"
-                        class="upsell-add-to-cart btn"
-                        style="background-color: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }}; font-family: {{ section.settings.font_family }}"
-                        data-variant-id="{{ upsell_product.selected_or_first_available_variant.id }}"
-                        data-quantity="1"
-                        {% unless upsell_product.selected_or_first_available_variant.available %}disabled{% endunless %}>
-                  {% if upsell_product.selected_or_first_available_variant.available %}
-                    {{ section.settings.button_text }}
-                  {% else %}
-                    Esgotado
-                  {% endif %}
-                </button>
+                <form method="post" action="/cart/add">
+                  <input type="hidden" name="id" value="{{ upsell_product.selected_or_first_available_variant.id }}">
+                  <button type="submit" class="btn btn-primary">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
               {% else %}
                 <form method="post" action="/cart/add">
                   <select name="id" class="upsell-variant-selector">
@@ -110,10 +90,8 @@
                       {% endif %}
                     {% endfor %}
                   </select>
-                  <button type="submit"
-                          class="btn"
-                          style="background-color: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }}; font-family: {{ section.settings.font_family }}">
-                    {{ section.settings.button_text }}
+                  <button type="submit" class="btn btn-primary">
+                    Adicionar ao Carrinho
                   </button>
                 </form>
               {% endif %}
@@ -125,7 +103,6 @@
   </div>
 </section>
 {% endif %}
-
 
 {% schema %}
 {

@@ -1,34 +1,127 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
-  assign test_products = collections['aneis'].products | where: "available", true
-  assign filtered_products = test_products | reject: "id", cart_product_ids
-  assign max_products_to_display = 3
+  assign collection_handles = "" | split: ","
+
+  if section.settings.collection_1_handle != blank
+    assign collection_handles = collection_handles | push: section.settings.collection_1_handle
+  endif
+  if section.settings.collection_2_handle != blank
+    assign collection_handles = collection_handles | push: section.settings.collection_2_handle
+  endif
+  if section.settings.collection_3_handle != blank
+    assign collection_handles = collection_handles | push: section.settings.collection_3_handle
+  endif
+
+  assign max_products_to_display = section.settings.max_products | default: 3
   assign displayed_products_count = 0
+  assign shown_ids = ''
   assign random_seed = 'now' | date: '%s' | modulo: 1000
-  assign product_count = filtered_products.size
 -%}
 
-{% if cart.item_count > 0 and product_count > 0 %}
-<section>
-  <h3>Você também pode gostar</h3>
-  <div class="upsell-products-grid">
-    {% for i in (0..product_count) %}
-      {%- liquid
-        if displayed_products_count >= max_products_to_display
-          break
-        endif
+{% if cart.item_count > 0 %}
+<section class="upsell-products-section" data-section-id="{{ section.id }}">
+  <div class="upsell-products-container">
+    <div class="upsell-header" style="font-family: {{ section.settings.font_family }}">
+      <h3 class="upsell-title">{{ section.settings.title }}</h3>
+      {% if section.settings.subtitle != blank %}
+        <p class="upsell-subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
 
-        assign index = random_seed | plus: i | modulo: product_count
-        assign upsell_product = filtered_products[index]
+    <div class="upsell-products-grid">
+      {% for handle in collection_handles %}
+        {%- liquid
+          if displayed_products_count >= max_products_to_display
+            break
+          endif
 
-        assign displayed_products_count = displayed_products_count | plus: 1
-      -%}
+          assign collection_products = collections[handle].products | where: "available", true
+          assign filtered_products = collection_products | reject: "id", cart_product_ids
+          assign collection_size = filtered_products.size
+        -%}
 
-      <div>
-        <p>{{ upsell_product.title }}</p>
-        <p>{{ upsell_product.price | money }}</p>
-      </div>
-    {% endfor %}
+        {% if collection_size > 0 %}
+          {%- liquid
+            assign start_index = random_seed | plus: displayed_products_count | modulo: collection_size
+            assign upsell_product = filtered_products[start_index]
+
+            if shown_ids contains upsell_product.id
+              continue
+            endif
+
+            assign shown_ids = shown_ids | append: upsell_product.id | append: ','
+            assign displayed_products_count = displayed_products_count | plus: 1
+          -%}
+
+          <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
+            <div class="upsell-product-image">
+              <a href="{{ upsell_product.url }}" class="upsell-product-link">
+                {% if upsell_product.featured_image %}
+                  <img src="{{ upsell_product.featured_image | image_url: width: 300 }}"
+                       alt="{{ upsell_product.featured_image.alt | default: upsell_product.title }}"
+                       loading="lazy" width="300" height="300">
+                {% else %}
+                  <div class="upsell-product-placeholder">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                      <circle cx="8.5" cy="8.5" r="1.5"/>
+                      <polyline points="21,15 16,10 5,21"/>
+                    </svg>
+                  </div>
+                {% endif %}
+              </a>
+            </div>
+
+            <div class="upsell-product-info" style="font-family: {{ section.settings.font_family }}">
+              <h4 class="upsell-product-title">
+                <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
+              </h4>
+
+              <div class="upsell-product-price">
+                {% if upsell_product.compare_at_price > upsell_product.price %}
+                  <span class="upsell-price-compare">{{ upsell_product.compare_at_price | money }}</span>
+                  <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
+                {% else %}
+                  <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
+                {% endif %}
+              </div>
+
+              {% if upsell_product.variants.size == 1 %}
+                <button type="button"
+                        class="upsell-add-to-cart btn"
+                        style="background-color: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }}; font-family: {{ section.settings.font_family }}"
+                        data-variant-id="{{ upsell_product.selected_or_first_available_variant.id }}"
+                        data-quantity="1"
+                        {% unless upsell_product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+                  {% if upsell_product.selected_or_first_available_variant.available %}
+                    {{ section.settings.button_text }}
+                  {% else %}
+                    Esgotado
+                  {% endif %}
+                </button>
+              {% else %}
+                <form method="post" action="/cart/add">
+                  <select name="id" class="upsell-variant-selector">
+                    {% for variant in upsell_product.variants %}
+                      {% if variant.available %}
+                        <option value="{{ variant.id }}">{{ variant.title }} – {{ variant.price | money }}</option>
+                      {% else %}
+                        <option value="{{ variant.id }}" disabled>{{ variant.title }} – Esgotado</option>
+                      {% endif %}
+                    {% endfor %}
+                  </select>
+                  <button type="submit"
+                          class="btn"
+                          style="background-color: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }}; font-family: {{ section.settings.font_family }}">
+                    {{ section.settings.button_text }}
+                  </button>
+                </form>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 {% endif %}

@@ -1,50 +1,48 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
-  assign collection_handles = "" | split: ","
+  assign collections_list = "" | split: "," 
 
-  if section.settings.collection_1 and section.settings.collection_1.handle
-    assign collection_handles = collection_handles | push: section.settings.collection_1.handle
+  if section.settings.collection_1
+    assign collections_list = collections_list | push: section.settings.collection_1
   endif
-  if section.settings.collection_2 and section.settings.collection_2.handle
-    assign collection_handles = collection_handles | push: section.settings.collection_2.handle
+  if section.settings.collection_2
+    assign collections_list = collections_list | push: section.settings.collection_2
   endif
-  if section.settings.collection_3 and section.settings.collection_3.handle
-    assign collection_handles = collection_handles | push: section.settings.collection_3.handle
+  if section.settings.collection_3
+    assign collections_list = collections_list | push: section.settings.collection_3
   endif
 
   assign max_products_to_display = section.settings.max_products | default: 3
   assign displayed_products_count = 0
   assign shown_ids = ''
   assign random_seed = 'now' | date: '%s' | modulo: 1000
-  assign collection_count = collection_handles.size
 -%}
 
 {% if cart.item_count > 0 %}
 <section class="upsell-products-section" data-section-id="{{ section.id }}">
   <div class="upsell-products-container">
     <div class="upsell-header" style="font-family: {{ section.settings.font_family }}">
-      <h3 class="upsell-title">{{ section.settings.title | default: 'Você também pode gostar' }}</h3>
+      <h3 class="upsell-title">{{ section.settings.title }}</h3>
       {% if section.settings.subtitle != blank %}
         <p class="upsell-subtitle">{{ section.settings.subtitle }}</p>
       {% endif %}
     </div>
 
     <div class="upsell-products-grid">
-      {% for i in (0..collection_count) %}
+      {% for collection in collections_list %}
         {%- liquid
           if displayed_products_count >= max_products_to_display
             break
           endif
 
-          assign current_collection_handle = collection_handles[i]
-          assign collection_products = collections[current_collection_handle].products | where: "available", true
+          assign collection_products = collection.products | where: "available", true
           assign filtered_products = collection_products | reject: "id", cart_product_ids
           assign collection_size = filtered_products.size
         -%}
 
         {% if collection_size > 0 %}
           {%- liquid
-            assign start_index = random_seed | plus: i | modulo: collection_size
+            assign start_index = random_seed | plus: displayed_products_count | modulo: collection_size
             assign upsell_product = filtered_products[start_index]
 
             if shown_ids contains upsell_product.id
@@ -96,7 +94,7 @@
                         data-quantity="1"
                         {% unless upsell_product.selected_or_first_available_variant.available %}disabled{% endunless %}>
                   {% if upsell_product.selected_or_first_available_variant.available %}
-                    {{ section.settings.button_text | default: 'Adicionar ao Carrinho' }}
+                    {{ section.settings.button_text }}
                   {% else %}
                     Esgotado
                   {% endif %}
@@ -115,7 +113,7 @@
                   <button type="submit"
                           class="btn"
                           style="background-color: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }}; font-family: {{ section.settings.font_family }}">
-                    {{ section.settings.button_text | default: 'Adicionar ao Carrinho' }}
+                    {{ section.settings.button_text }}
                   </button>
                 </form>
               {% endif %}

@@ -7,11 +7,11 @@
 
   assign max_products_to_display = 3
   assign displayed_products_count = 0
+  assign used_collections = ''
+  assign displayed_handles = ''
 
   assign random_seed = 'now' | date: '%s' | modulo: 1000
   assign start_index = random_seed | modulo: candidate_products.size
-
-  assign used_collections = ''
 -%}
 
 {% if candidate_products.size > 0 and cart.item_count > 0 %}
@@ -35,17 +35,23 @@
           assign upsell_product = candidate_products[current_index]
 
           if upsell_product
-            assign first_collection = upsell_product.collections | first | default: ''
-            unless used_collections contains first_collection
-              assign used_collections = used_collections | append: ',' | append: first_collection
-              assign displayed_products_count = displayed_products_count | plus: 1
+            assign first_collection = upsell_product.collections | first
+            if first_collection and used_collections contains first_collection.handle
+              assign skip = true
             else
-              continue
-            endunless
+              assign skip = false
+            endif
           endif
         -%}
 
-        {% if upsell_product %}
+        {% if upsell_product and skip == false %}
+          {%- liquid
+            assign displayed_products_count = displayed_products_count | plus: 1
+            if first_collection
+              assign used_collections = used_collections | append: ',' | append: first_collection.handle
+            endif
+          -%}
+
           <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
             <div class="upsell-product-image">
               <a href="{{ upsell_product.url }}" class="upsell-product-link">

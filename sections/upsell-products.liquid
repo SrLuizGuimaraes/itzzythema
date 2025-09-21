@@ -1,11 +1,9 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
-
-  assign collection_handles = "Brincos,Colares,Anéis" | split: ","
+  assign collection_handles = "Brincos,Colares,colecao-c" | split: ","
   assign max_products_to_display = 3
   assign displayed_products_count = 0
   assign shown_ids = ''
-
   assign random_seed = 'now' | date: '%s' | modulo: 1000
 -%}
 
@@ -92,7 +90,20 @@
                 {% endif %}
               </button>
             {% else %}
-              <a href="{{ upsell_product.url }}" class="upsell-view-product btn btn-secondary">Ver Produto</a>
+              <form method="post" action="/cart/add">
+                <select name="id" class="upsell-variant-selector">
+                  {% for variant in upsell_product.variants %}
+                    {% if variant.available %}
+                      <option value="{{ variant.id }}">{{ variant.title }} – {{ variant.price | money }}</option>
+                    {% else %}
+                      <option value="{{ variant.id }}" disabled>{{ variant.title }} – Esgotado</option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-primary">
+                  {{ section.settings.button_text | default: 'Adicionar ao Carrinho' }}
+                </button>
+              </form>
             {% endif %}
           </div>
         </div>

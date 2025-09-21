@@ -42,25 +42,29 @@
     },
     "17583901186ec74a54": {
       "type": "apps",
-      "blocks": {
-        "zotasell_ai_upsell_cross_sell_upsell_cart_page_bjbKea": {
-          "type": "shopify://apps/zotasell-ai-upsell-cross-sell/blocks/upsell-cart-page/29660b22-f312-48b7-a61d-7f1eb7b9f7a2",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "zotasell_ai_upsell_cross_sell_upsell_cart_page_bjbKea"
-      ],
       "settings": {
         "separate_section_with_border": true,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false
+      }
+    },
+    "upsell_products_zUF394": {
+      "type": "upsell-products",
+      "name": "Upsell Products",
+      "settings": {
+        "title": "Você também pode gostar",
+        "subtitle": "",
+        "button_text": "Adicionar ao Carrinho",
+        "products_per_row": "3",
+        "section_padding_top": 36,
+        "section_padding_bottom": 36
       }
     }
   },
   "order": [
     "17581481069c701b2d",
     "main",
-    "17583901186ec74a54"
+    "17583901186ec74a54",
+    "upsell_products_zUF394"
   ]
 }

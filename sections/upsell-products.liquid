@@ -25,6 +25,14 @@
   assign displayed_products_count = 0
 -%}
 
+<!-- DEBUG INFO -->
+<div style="background: #f0f0f0; padding: 10px; margin: 10px 0; border: 1px solid #ccc;">
+  <p>DEBUG: candidate_handles_array.size = {{ candidate_handles_array.size }}</p>
+  <p>DEBUG: cart.item_count = {{ cart.item_count }}</p>
+  <p>DEBUG: cart_product_ids = {{ cart_product_ids | join: ', ' }}</p>
+</div>
+<!-- END DEBUG INFO -->
+
 {% if candidate_handles_array.size > 0 and cart.item_count > 0 %}
 <section class="upsell-products-section" data-section-id="{{ section.id }}">
   <div class="upsell-products-container">

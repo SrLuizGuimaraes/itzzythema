@@ -2,13 +2,13 @@
   assign cart_product_ids = cart.items | map: 'product_id'
   assign collection_handles = "" | split: ","
   if section.settings.collection_1 != blank
-    assign collection_handles = collection_handles | push: section.settings.collection_1
+    assign collection_handles = collection_handles | push: section.settings.collection_1.handle
   endif
   if section.settings.collection_2 != blank
-    assign collection_handles = collection_handles | push: section.settings.collection_2
+    assign collection_handles = collection_handles | push: section.settings.collection_2.handle
   endif
   if section.settings.collection_3 != blank
-    assign collection_handles = collection_handles | push: section.settings.collection_3
+    assign collection_handles = collection_handles | push: section.settings.collection_3.handle
   endif
 
   assign max_products_to_display = section.settings.max_products | default: 3

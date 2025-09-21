@@ -77,7 +77,7 @@
                 <form method="post" action="/cart/add">
                   <input type="hidden" name="id" value="{{ upsell_product.selected_or_first_available_variant.id }}">
                   <button type="submit"
-                          class="btn btn--primary btn--full"
+                          class="button button--primary button--full"
                           style="font-family: {{ section.settings.font_family }}">
                     {{ section.settings.button_text }}
                   </button>
@@ -94,7 +94,7 @@
                     {% endfor %}
                   </select>
                   <button type="submit"
-                          class="btn btn--primary btn--full"
+                          class="button button--primary button--full"
                           style="font-family: {{ section.settings.font_family }}">
                     {{ section.settings.button_text }}
                   </button>

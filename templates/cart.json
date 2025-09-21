@@ -52,9 +52,9 @@
       "type": "upsell-products",
       "name": "Upsell Products",
       "settings": {
-        "collection_1": "aneis",
-        "collection_2": "brinco",
-        "collection_3": "colar",
+        "collection_1_handle": "aneis",
+        "collection_2_handle": "colare",
+        "collection_3_handle": "pulseira",
         "max_products": 3,
         "title": "Você também pode gostar",
         "subtitle": "",

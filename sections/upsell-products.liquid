@@ -37,22 +37,28 @@
 
           assign collection_products = collection.products | where: "available", true
           assign filtered_products = collection_products | reject: "id", cart_product_ids
-          assign collection_size = filtered_products.size
-        -%}
 
-        {% if collection_size > 0 %}
-          {%- liquid
-            assign start_index = random_seed | plus: displayed_products_count | modulo: collection_size
+          if filtered_products.size > 0
+            assign start_index = random_seed | modulo: filtered_products.size
             assign upsell_product = filtered_products[start_index]
 
-            if shown_ids contains upsell_product.id
+            unless shown_ids contains upsell_product.id
+              if shown_ids != ''
+                assign shown_ids = shown_ids | append: ',' | append: upsell_product.id
+              else
+                assign shown_ids = upsell_product.id
+              endif
+
+              assign displayed_products_count = displayed_products_count | plus: 1
+            else
               continue
-            endif
+            endunless
+          else
+            continue
+          endif
+        -%}
 
-            assign shown_ids = shown_ids | append: upsell_product.id | append: ','
-            assign displayed_products_count = displayed_products_count | plus: 1
-          -%}
-
+        {% if upsell_product %}
           <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
             <div class="upsell-product-image">
               <a href="{{ upsell_product.url }}" class="upsell-product-link">

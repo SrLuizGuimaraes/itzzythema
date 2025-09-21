@@ -1,0 +1,290 @@
+/* 
+ * Estilos para o Bloco de Upsell - Tema Prestige
+ * Mantém a identidade visual e consistência com o tema
+ */
+
+.upsell-products-section {
+  padding: var(--section-padding-top, 36px) 0 var(--section-padding-bottom, 36px);
+  background: var(--color-background, #ffffff);
+}
+
+.upsell-products-container {
+  max-width: var(--page-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--page-margin, 20px);
+}
+
+/* Header do Upsell */
+.upsell-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.upsell-title {
+  font-family: var(--font-heading-family, inherit);
+  font-size: var(--font-heading-scale, 1.5em);
+  font-weight: var(--font-heading-weight, 600);
+  color: var(--color-foreground, #000000);
+  margin: 0 0 0.5rem;
+  letter-spacing: var(--font-heading-letter-spacing, 0);
+  line-height: var(--font-heading-line-height, 1.2);
+}
+
+.upsell-subtitle {
+  font-family: var(--font-body-family, inherit);
+  font-size: var(--font-body-scale, 1em);
+  color: var(--color-foreground-75, rgba(0, 0, 0, 0.75));
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Grid de Produtos */
+.upsell-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .upsell-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .upsell-products-grid {
+    gap: 3rem;
+  }
+}
+
+/* Card do Produto */
+.upsell-product-card {
+  background: var(--color-background, #ffffff);
+  border-radius: var(--border-radius, 8px);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
+  position: relative;
+}
+
+.upsell-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-border-hover, rgba(0, 0, 0, 0.2));
+}
+
+/* Imagem do Produto */
+.upsell-product-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--color-background-secondary, #f8f8f8);
+}
+
+.upsell-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.upsell-product-card:hover .upsell-product-image img {
+  transform: scale(1.05);
+}
+
+.upsell-product-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-foreground-50, rgba(0, 0, 0, 0.5));
+  background: var(--color-background-secondary, #f8f8f8);
+}
+
+/* Informações do Produto */
+.upsell-product-info {
+  padding: 1.5rem;
+}
+
+.upsell-product-title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-heading-family, inherit);
+  font-size: 1.1em;
+  font-weight: var(--font-heading-weight, 600);
+  line-height: 1.3;
+}
+
+.upsell-product-title a {
+  color: var(--color-foreground, #000000);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.upsell-product-title a:hover {
+  color: var(--color-link, #007acc);
+}
+
+/* Preços */
+.upsell-product-price {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.upsell-price-current {
+  font-family: var(--font-body-family, inherit);
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--color-foreground, #000000);
+}
+
+.upsell-price-compare {
+  font-family: var(--font-body-family, inherit);
+  font-size: 0.9em;
+  color: var(--color-foreground-50, rgba(0, 0, 0, 0.5));
+  text-decoration: line-through;
+}
+
+/* Botões */
+.upsell-add-to-cart,
+.upsell-view-product {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius, 4px);
+  font-family: var(--font-body-family, inherit);
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+}
+
+.upsell-add-to-cart {
+  background: var(--color-button, #000000);
+  color: var(--color-button-text, #ffffff);
+}
+
+.upsell-add-to-cart:hover:not(:disabled) {
+  background: var(--color-button-hover, #333333);
+  transform: translateY(-1px);
+}
+
+.upsell-add-to-cart:disabled {
+  background: var(--color-foreground-25, rgba(0, 0, 0, 0.25));
+  cursor: not-allowed;
+  transform: none;
+}
+
+.upsell-view-product {
+  background: transparent;
+  color: var(--color-foreground, #000000);
+  border: 1px solid var(--color-border, rgba(0, 0, 0, 0.2));
+}
+
+.upsell-view-product:hover {
+  background: var(--color-foreground, #000000);
+  color: var(--color-background, #ffffff);
+  transform: translateY(-1px);
+}
+
+/* Estados do Botão */
+.upsell-add-to-cart.loading {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.upsell-add-to-cart.success {
+  background: var(--color-success, #28a745);
+}
+
+.upsell-add-to-cart.error {
+  background: var(--color-error, #dc3545);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.upsell-product-card {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.upsell-product-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.upsell-product-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* Responsividade */
+@media screen and (max-width: 749px) {
+  .upsell-products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .upsell-product-info {
+    padding: 1rem;
+  }
+  
+  .upsell-title {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .upsell-products-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .upsell-products-container {
+    padding: 0 var(--page-margin, 15px);
+  }
+}
+
+/* Integração com tema Prestige - Variáveis CSS customizáveis */
+.upsell-products-section[data-color-scheme="dark"] {
+  --color-background: #1a1a1a;
+  --color-foreground: #ffffff;
+  --color-foreground-75: rgba(255, 255, 255, 0.75);
+  --color-foreground-50: rgba(255, 255, 255, 0.5);
+  --color-foreground-25: rgba(255, 255, 255, 0.25);
+  --color-border: rgba(255, 255, 255, 0.2);
+  --color-border-hover: rgba(255, 255, 255, 0.3);
+  --color-background-secondary: #2a2a2a;
+}
+
+/* Compatibilidade com classes do tema Prestige */
+.upsell-products-section .btn {
+  /* Herda estilos de botão do tema */
+}
+
+.upsell-products-section .btn-primary {
+  /* Herda estilos de botão primário do tema */
+}
+
+.upsell-products-section .btn-secondary {
+  /* Herda estilos de botão secundário do tema */
+}
+

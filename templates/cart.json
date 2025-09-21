@@ -52,12 +52,16 @@
       "type": "upsell-products",
       "name": "Upsell Products",
       "settings": {
+        "collection_1": "aneis",
+        "collection_2": "brinco",
+        "collection_3": "colar",
+        "max_products": 3,
         "title": "Você também pode gostar",
         "subtitle": "",
         "button_text": "Adicionar ao Carrinho",
-        "products_per_row": "3",
-        "section_padding_top": 36,
-        "section_padding_bottom": 36
+        "button_bg_color": "#000000",
+        "button_text_color": "#ffffff",
+        "font_family": "inherit"
       }
     }
   },

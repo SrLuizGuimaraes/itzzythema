@@ -77,8 +77,8 @@
                 <form method="post" action="/cart/add">
                   <input type="hidden" name="id" value="{{ upsell_product.selected_or_first_available_variant.id }}">
                   <button type="submit"
-                          class="btn btn-primary"
-                          style="background-color: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }}; font-family: {{ section.settings.font_family }}">
+                          class="btn btn--primary btn--full"
+                          style="font-family: {{ section.settings.font_family }}">
                     {{ section.settings.button_text }}
                   </button>
                 </form>
@@ -94,8 +94,8 @@
                     {% endfor %}
                   </select>
                   <button type="submit"
-                          class="btn btn-primary"
-                          style="background-color: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }}; font-family: {{ section.settings.font_family }}">
+                          class="btn btn--primary btn--full"
+                          style="font-family: {{ section.settings.font_family }}">
                     {{ section.settings.button_text }}
                   </button>
                 </form>

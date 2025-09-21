@@ -1,6 +1,6 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
-  assign collection_handles = "meninas,meninos,calcados,bolsas,colares,pulseiras" | split: ","
+  assign collection_handles = "aneis,mais-vendidos,mix-match,brinco,colar,pulseiras" | split: ","
   assign max_products_to_display = 6
   assign displayed_products_count = 0
   assign shown_ids = ''

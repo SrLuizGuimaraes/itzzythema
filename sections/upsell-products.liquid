@@ -5,27 +5,27 @@
 
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
-  assign all_shop_products = all_products
-  assign candidate_products = ''
-
-  for product in all_shop_products
-    if product.available and product.variants.size > 0
-      unless cart_product_ids contains product.id
-        if candidate_products == ''
-          assign candidate_products = product.handle
-        else
-          assign candidate_products = candidate_products | append: ',' | append: product.handle
-        endif
-      endunless
-    endif
+  assign all_products = collections.all.products
+  assign available_products = all_products | where: 'available', true
+  assign filtered_products = ''
+  
+  for product in available_products
+    unless cart_product_ids contains product.id
+      if filtered_products == ''
+        assign filtered_products = product.id
+      else
+        assign filtered_products = filtered_products | append: ',' | append: product.id
+      endif
+    endunless
   endfor
-
-  assign candidate_handles_array = candidate_products | split: ','
-  assign max_products_to_display = 3
-  assign displayed_products_count = 0
+  
+  assign product_ids_array = filtered_products | split: ','
+  assign shuffled_products = ''
+  assign max_products = 3
+  assign products_count = 0
 -%}
 
-{% if candidate_handles_array.size > 0 and cart.item_count > 0 %}
+{% if product_ids_array.size > 0 and cart.item_count > 0 %}
 <section class="upsell-products-section" data-section-id="{{ section.id }}">
   <div class="upsell-products-container">
     <div class="upsell-header">
@@ -38,23 +38,23 @@
     <div class="upsell-products-grid">
       {%- liquid
         assign random_seed = 'now' | date: '%s' | modulo: 1000
-        assign start_index = random_seed | modulo: candidate_handles_array.size
+        assign start_index = random_seed | modulo: product_ids_array.size
       -%}
       
-      {% for i in (0..candidate_handles_array.size) %}
+      {% for i in (0..product_ids_array.size) %}
         {%- liquid
-          if displayed_products_count >= max_products_to_display
+          if products_count >= max_products
             break
           endif
           
-          assign current_index = start_index | plus: i | modulo: candidate_handles_array.size
-          assign product_handle = candidate_handles_array[current_index]
-          assign upsell_product = all_shop_products | where: 'handle', product_handle | first
+          assign current_index = start_index | plus: i | modulo: product_ids_array.size
+          assign product_id = product_ids_array[current_index]
+          assign upsell_product = all_products | where: 'id', product_id | first
         -%}
         
         {% if upsell_product and upsell_product.available %}
           {%- liquid
-            assign displayed_products_count = displayed_products_count | plus: 1
+            assign products_count = products_count | plus: 1
           -%}
           <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
             <div class="upsell-product-image">

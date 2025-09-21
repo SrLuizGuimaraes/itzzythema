@@ -1,21 +1,15 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
-  assign all_shop_products = collections['all'].products
-  assign candidate_products = all_shop_products | where: "available", true
-  assign candidate_products = candidate_products | reject: "id", cart_product_ids
-  assign candidate_size = candidate_products.size
+
+  assign collection_handles = "colecao-a,colecao-b,colecao-c" | split: ","
   assign max_products_to_display = 3
   assign displayed_products_count = 0
   assign shown_ids = ''
-  assign start_index = 0
 
-  if candidate_size > 0
-    assign random_seed = 'now' | date: '%s' | modulo: 1000
-    assign start_index = random_seed | modulo: candidate_size
-  endif
+  assign random_seed = 'now' | date: '%s' | modulo: 1000
 -%}
 
-{% if candidate_size > 0 and cart.item_count > 0 %}
+{% if cart.item_count > 0 %}
 <section class="upsell-products-section" data-section-id="{{ section.id }}">
   <div class="upsell-products-container">
     <div class="upsell-header">
@@ -26,14 +20,23 @@
     </div>
 
     <div class="upsell-products-grid">
-      {% for i in (0..20) %}
+      {% for i in (0..collection_handles.size) %}
         {%- liquid
           if displayed_products_count >= max_products_to_display
             break
           endif
 
-          assign current_index = start_index | plus: i | modulo: candidate_size
-          assign upsell_product = candidate_products[current_index]
+          assign current_collection_handle = collection_handles[i]
+          assign collection_products = collections[current_collection_handle].products | where: "available", true
+          assign filtered_products = collection_products | reject: "id", cart_product_ids
+          assign collection_size = filtered_products.size
+
+          if collection_size == 0
+            continue
+          endif
+
+          assign start_index = random_seed | plus: i | modulo: collection_size
+          assign upsell_product = filtered_products[start_index]
 
           if shown_ids contains upsell_product.id
             continue

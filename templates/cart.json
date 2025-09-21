@@ -20,6 +20,7 @@
       "block_order": [
         "upsell_app_by_essentialwolf_app_block_kXALYe"
       ],
+      "disabled": true,
       "custom_css": [
         ".upsell_brand {display: none !important;}",
         ".upsell-slide-add-cart-btn {/* Cores */ background-color: #d11e29 !important; border-color: #d11e29 !important; /* Fonte e Texto */ color: #ffffff !important; text-transform: uppercase !important; font-weight: 700 !important; /* Centralizar a palavra */ justify-content: center !important; align-items: center !important;}"
@@ -52,9 +53,6 @@
       "type": "upsell-products",
       "name": "Upsell Products",
       "settings": {
-        "collection_1_handle": "aneis",
-        "collection_2_handle": "colar",
-        "collection_3_handle": "pulseira",
         "max_products": 3,
         "title": "Você também pode gostar",
         "subtitle": "",

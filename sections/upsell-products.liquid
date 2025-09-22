@@ -39,7 +39,6 @@
       margin-top: 6px;
     }
 
-    /* Oculta qualquer barra de navegação automática */
     .slider-nav,
     .flickity-page-dots,
     .flickity-prev-next-button {
@@ -76,7 +75,7 @@
   </script>
 
   <div class="upsell-products-container">
-    <div class="upsell-header" style="font-family: {{ section.settings.font_family }}">
+    <div class="upsell-header">
       <h3 class="upsell-title">{{ section.settings.title }}</h3>
       {% if section.settings.subtitle != blank %}
         <p class="upsell-subtitle">{{ section.settings.subtitle }}</p>
@@ -119,7 +118,7 @@
               </a>
             </div>
 
-            <div class="upsell-product-info" style="font-family: {{ section.settings.font_family }}">
+            <div class="upsell-product-info">
               <h4 class="upsell-product-title">
                 <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
               </h4>
@@ -147,8 +146,7 @@
                 {% endif %}
 
                 <button type="submit"
-                        class="button button--primary button--full"
-                        style="font-family: {{ section.settings.font_family }}">
+                        class="button button--primary button--full">
                   {{ section.settings.button_text }}
                 </button>
               </form>
@@ -202,19 +200,6 @@
       "id": "button_text_color",
       "label": "Cor do texto do botão",
       "default": "#ffffff"
-    },
-    {
-      "type": "select",
-      "id": "font_family",
-      "label": "Fonte",
-      "default": "inherit",
-      "options": [
-        { "value": "inherit", "label": "Padrão do tema" },
-        { "value": "Arial, sans-serif", "label": "Arial" },
-        { "value": "'Helvetica Neue', sans-serif", "label": "Helvetica Neue" },
-        { "value": "'Times New Roman', serif", "label": "Times New Roman" },
-        { "value": "'Courier New', monospace", "label": "Courier New" }
-      ]
     }
   ]
 }

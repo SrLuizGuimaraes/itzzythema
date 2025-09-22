@@ -13,10 +13,10 @@
       "type": "upsell-products",
       "name": "Upsell Products",
       "settings": {
-        "max_products": 4,
+        "max_products": 3,
         "title": "Você também pode gostar",
         "subtitle": "",
-        "button_text": "Adicionar ao Carrinho",
+        "button_text": "Adicionar",
         "button_bg_color": "#ae0002",
         "button_text_color": "#ffffff",
         "font_family": "inherit"

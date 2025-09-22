@@ -12,33 +12,6 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "image_PXM4YW": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Banner_pc_d8c628d8-64f8-4852-8eeb-809d6259fdff.png",
-            "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_9df57cd4-663c-4fbe-b034-4092ccd949ad.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 1200,
-            "button_1_text": "",
-            "button_1_link": "shopify://collections/semana-do-cliente",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "https://itzzy.com.br/collections/mix-match",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 50,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        },
         "image_P7GBAd": {
           "type": "image",
           "settings": {
@@ -68,7 +41,6 @@
         }
       },
       "block_order": [
-        "image_PXM4YW",
         "image_P7GBAd"
       ],
       "settings": {

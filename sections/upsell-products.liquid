@@ -9,37 +9,51 @@
 
 {% if cart.item_count > 0 %}
 <section class="upsell-products-section">
-  <style>
-  .upsell-carousel {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 8px;
-    scroll-behavior: smooth;
-  }
-
-  .upsell-product-card {
-    flex: 0 0 calc(50% - 6px); /* 2 produtos por vez com espaçamento */
-    scroll-snap-align: start;
-    box-sizing: border-box;
-  }
-
-  @media screen and (min-width: 768px) {
+ <style>
     .upsell-carousel {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 24px;
-      overflow-x: unset;
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      scroll-behavior: smooth;
     }
 
     .upsell-product-card {
-      flex: unset;
-      scroll-snap-align: unset;
+      flex: 0 0 calc(50% - 6px);
+      scroll-snap-align: start;
+      box-sizing: border-box;
     }
-  }
-</style>
+
+    .upsell-product-info form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .upsell-product-info button,
+    .upsell-product-info select {
+      width: 100%;
+      max-width: 200px;
+      margin-top: 6px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .upsell-carousel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 24px;
+        overflow-x: unset;
+      }
+
+      .upsell-product-card {
+        flex: unset;
+        scroll-snap-align: unset;
+      }
+    }
+  </style>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {

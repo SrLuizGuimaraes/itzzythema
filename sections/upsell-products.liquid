@@ -94,26 +94,6 @@
           carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
         }, 3000);
       }
-
-      // AJAX para adicionar ao carrinho
-      document.querySelectorAll('.upsell-products-section form').forEach(form => {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          const formData = new FormData(form);
-          fetch('/cart/add.js', {
-            method: 'POST',
-            body: formData
-          })
-          .then(res => res.json())
-          .then(data => {
-            console.log('Produto adicionado via AJAX:', data);
-            // Aqui você pode integrar com carrinho lateral ou mostrar uma notificação
-          })
-          .catch(err => {
-            console.error('Erro ao adicionar via AJAX:', err);
-          });
-        });
-      });
     });
   </script>
 
@@ -201,6 +181,7 @@
   </div>
 </section>
 {% endif %}
+
 
 
 {% schema %}

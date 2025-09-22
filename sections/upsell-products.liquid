@@ -12,7 +12,7 @@
   <style>
     .upsell-carousel {
       display: flex;
-      gap: 16px;
+      gap: 12px;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
@@ -23,21 +23,56 @@
     .upsell-product-card {
       flex: 0 0 auto;
       scroll-snap-align: start;
-      min-width: calc(50% - 8px);
+      min-width: calc(50% - 6px);
       box-sizing: border-box;
+      border: 1px solid #eee;
+      padding: 8px;
+      background: #fff;
+    }
+
+    .upsell-product-image img {
+      width: 100%;
+      height: auto;
+      max-height: 160px;
+      object-fit: contain;
+    }
+
+    .upsell-product-title {
+      font-size: 14px;
+      margin: 6px 0;
+    }
+
+    .upsell-product-price {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .upsell-variant-selector {
+      width: 100%;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .button--primary {
+      font-size: 13px;
+      padding: 8px 12px;
     }
 
     @media screen and (min-width: 768px) {
       .upsell-carousel {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
         overflow-x: unset;
       }
 
       .upsell-product-card {
         min-width: unset;
         scroll-snap-align: unset;
+      }
+
+      .upsell-product-image img {
+        max-height: 180px;
       }
     }
   </style>
@@ -95,7 +130,7 @@
                 {% if upsell_product.featured_image %}
                   <img src="{{ upsell_product.featured_image | image_url: width: 300 }}"
                        alt="{{ upsell_product.featured_image.alt | default: upsell_product.title }}"
-                       loading="lazy" width="300" height="300">
+                       loading="lazy">
                 {% endif %}
               </a>
             </div>

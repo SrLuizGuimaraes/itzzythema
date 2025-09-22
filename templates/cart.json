@@ -13,7 +13,7 @@
       "type": "upsell-products",
       "name": "Upsell Products",
       "settings": {
-        "max_products": 3,
+        "max_products": 5,
         "title": "Você também pode gostar",
         "subtitle": "",
         "button_text": "Adicionar",

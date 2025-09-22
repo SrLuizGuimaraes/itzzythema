@@ -76,9 +76,9 @@
 
   <div class="upsell-products-container">
     <div class="upsell-header">
-      <h3 class="cart__title">{{ section.settings.title }}</h3>
+      <h3 class="upsell-title">{{ section.settings.title }}</h3>
       {% if section.settings.subtitle != blank %}
-        <p class="cart__subtitle">{{ section.settings.subtitle }}</p>
+        <p class="upsell-subtitle">{{ section.settings.subtitle }}</p>
       {% endif %}
     </div>
 
@@ -119,15 +119,15 @@
             </div>
 
             <div class="upsell-product-info">
-              <h4 class="cart__title">
+              <h4 class="upsell-product-title">
                 <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
               </h4>
 
-              <div class="cart__price">
+              <div class="upsell-product-price">
                 {% if upsell_product.compare_at_price > upsell_product.price %}
-                  <span class="cart__price--compare">{{ upsell_product.compare_at_price | money }}</span>
+                  <span class="upsell-price-compare">{{ upsell_product.compare_at_price | money }}</span>
                 {% endif %}
-                <span class="cart__price--current">{{ upsell_product.price | money }}</span>
+                <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
               </div>
 
               <form method="post" action="/cart/add">
@@ -187,7 +187,7 @@
       "type": "text",
       "id": "button_text",
       "label": "Texto do botão",
-      "default": "ADICIONAR"
+      "default": "Adicionar ao Carrinho"
     },
     {
       "type": "color",

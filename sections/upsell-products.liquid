@@ -173,7 +173,7 @@
                 <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
               </div>
 
-              <form>
+              <form method="post" action="/cart/add">
                 {% if upsell_product.variants.size > 1 %}
                   <select name="id" class="upsell-variant-selector">
                     {% for variant in upsell_product.variants %}

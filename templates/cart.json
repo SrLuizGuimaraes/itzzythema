@@ -9,19 +9,6 @@
  */
 {
   "sections": {
-    "upsell_products_zUF394": {
-      "type": "upsell-products",
-      "name": "Upsell Products",
-      "settings": {
-        "max_products": 5,
-        "title": "Você também pode gostar",
-        "subtitle": "",
-        "button_text": "Adicionar",
-        "button_bg_color": "#ae0002",
-        "button_text_color": "#ffffff",
-        "font_family": "inherit"
-      }
-    },
     "17581481069c701b2d": {
       "type": "apps",
       "blocks": {
@@ -54,6 +41,18 @@
         "show_shipping_estimator": false
       }
     },
+    "upsell_products_zUF394": {
+      "type": "upsell-products",
+      "name": "Upsell Products",
+      "settings": {
+        "max_products": 5,
+        "title": "Você também pode gostar",
+        "subtitle": "",
+        "button_text": "Adicionar",
+        "button_bg_color": "#ae0002",
+        "button_text_color": "#ffffff"
+      }
+    },
     "17583901186ec74a54": {
       "type": "apps",
       "settings": {
@@ -64,9 +63,9 @@
     }
   },
   "order": [
-    "upsell_products_zUF394",
     "17581481069c701b2d",
     "main",
+    "upsell_products_zUF394",
     "17583901186ec74a54"
   ]
 }

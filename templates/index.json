@@ -61,12 +61,12 @@
           "type": "collection",
           "settings": {
             "collection": "aneis",
-            "image": "shopify://shop_images/23.png",
+            "image": "shopify://shop_images/FOTO_ANEL.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "Aneis",
+            "button_text": "Anel",
             "button_link": "",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -79,12 +79,12 @@
           "type": "collection",
           "settings": {
             "collection": "colar",
-            "image": "shopify://shop_images/22_2931c455-991e-46c7-b988-2435ba1d0bc8.png",
+            "image": "shopify://shop_images/FOTO_COLAR.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "Colares",
+            "button_text": "Colar",
             "button_link": "",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -97,7 +97,7 @@
           "type": "collection",
           "settings": {
             "collection": "brinco",
-            "image": "shopify://shop_images/24_a8840457-0d85-47ec-853b-83a14ba5c61e.png",
+            "image": "shopify://shop_images/FOTO_BRINCO.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
@@ -110,19 +110,39 @@
             "button_background": "#930011",
             "button_text_color": "#ffe6e2"
           }
+        },
+        "collection_dbQJfL": {
+          "type": "collection",
+          "settings": {
+            "collection": "pulseiras",
+            "image": "shopify://shop_images/FOTO_PULSEIRA.png",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Pulseira",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "button_background": "",
+            "button_text_color": ""
+          }
         }
       },
       "block_order": [
         "collection-2",
         "collection-3",
-        "collection-1"
+        "collection-1",
+        "collection_dbQJfL"
       ],
       "custom_css": [
-        "{margin-top: 1%;}"
+        "@media (max-width: 767px) {.collection-list {display: grid !important; grid-template-columns: repeat(2, 1fr); gap: 2px; /* Espaço entre os itens */ } .collection-list .collection-item {width: 100% !important; }}",
+        " {margin-top: 1%;}"
       ],
       "settings": {
         "separate_section_with_border": true,
-        "image_size": "sm",
+        "image_size": "xs",
         "show_text_outside": false,
         "space_items": false,
         "stack_collections": true,

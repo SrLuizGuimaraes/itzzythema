@@ -55,8 +55,8 @@
         "cycle_speed": 3,
         "desktop_font_size": 11,
         "mobile_font_size": 10,
-        "background": "#ffffff",
-        "text_color": "#e32c2b"
+        "background": "#930011",
+        "text_color": "#ffffff"
       }
     },
     "header": {

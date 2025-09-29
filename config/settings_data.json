@@ -16,18 +16,18 @@
     "background": "#ffffff",
     "secondary_background": "#ffffff",
     "success_color": "#307a07",
-    "warning_color": "#ae0002",
-    "error_color": "#ae0002",
+    "warning_color": "#930011",
+    "error_color": "#930011",
     "header_background": "#ffffff",
     "header_text_color": "#1c1c1c",
-    "footer_background": "#ae0002",
+    "footer_background": "#930011",
     "footer_text_color": "#ffffff",
-    "primary_button_background": "#ae0002",
+    "primary_button_background": "#930011",
     "primary_button_text_color": "#ffffff",
     "modal_background": "#ffffff",
     "modal_text_color": "#1c1c1c",
     "product_rating_color": "#1c1c1c",
-    "product_on_sale_accent": "#ae0002",
+    "product_on_sale_accent": "#930011",
     "heading_font": "montserrat_n4",
     "heading_letter_spacing": 18,
     "text_font": "montserrat_n4",
@@ -60,14 +60,6 @@
         "type": "shopify://apps/upsell-app-by-essentialwolf/blocks/app-embed/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
         "disabled": false,
         "settings": {}
-      },
-      "10003540932433742857": {
-        "type": "shopify://apps/addly-bundle-upsell/blocks/addly-embed/ba93f155-a558-4082-82dd-21b22b27b698",
-        "disabled": false,
-        "settings": {
-          "n9_embed_css": "/* CSS Rules */",
-          "n9_embed_js": "/* JS Code */"
-        }
       }
     }
   },

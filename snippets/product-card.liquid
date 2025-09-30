@@ -131,7 +131,7 @@ Supported variables
               {%- render 'price-list', product: product, context: 'card' -%}
             {%- endif -%}
             {% comment %} Preço Pix e Parcelamento - Início {% endcomment %}
-{% assign pix_discounted_price = product.price | times: 0.95 | round: 2 %}
+{% assign pix_discounted_price = product.price | times: 0.97 | round: 2 %}
 {% assign installments_value = product.price | divided_by: 3 | round: 2 %}
 
 <div class="ProductItem__PaymentInfo" style="font-size:13px;">

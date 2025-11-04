@@ -42,7 +42,11 @@ Supported variables
               assign inventory_status = 'success'
 
               if show_in_stock_quantity and variant.inventory_management
-                assign inventory_text = 'product.inventory.in_stock_with_quantity_count' | t: count: variant.inventory_quantity
+                assign displayed_quantity = variant.inventory_quantity
+  if displayed_quantity > 5
+    assign displayed_quantity = 5
+  endif
+assign inventory_text = 'product.inventory.in_stock_with_quantity_count' | t: count: displayed_quantity
               else
                 assign inventory_text = 'product.inventory.in_stock' | t
               endif

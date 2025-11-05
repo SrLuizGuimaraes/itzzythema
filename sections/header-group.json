@@ -25,6 +25,12 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "message_hbfnHw": {
+          "type": "message",
+          "settings": {
+            "text": "BLACK MONTH"
+          }
+        },
         "message_7f7DLJ": {
           "type": "message",
           "settings": {
@@ -36,18 +42,12 @@
           "settings": {
             "text": "FRETE GRÁTIS A PARTIR DE R$499,99"
           }
-        },
-        "message_hbfnHw": {
-          "type": "message",
-          "settings": {
-            "text": "ENVIAMOS PARA TODO O BRASIL"
-          }
         }
       },
       "block_order": [
+        "message_hbfnHw",
         "message_7f7DLJ",
-        "message_BEkiRV",
-        "message_hbfnHw"
+        "message_BEkiRV"
       ],
       "settings": {
         "enable_sticky": false,

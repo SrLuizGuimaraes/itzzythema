@@ -31,23 +31,23 @@
             "text": "<strong>Black Month 🔥🔥</strong>"
           }
         },
-        "message_BEkiRV": {
-          "type": "message",
-          "settings": {
-            "text": "<strong>FRETE GRÁTIS A PARTIR DE R$299,99</strong>"
-          }
-        },
         "message_7f7DLJ": {
           "type": "message",
           "settings": {
             "text": "<strong>10% OFF NA PRIMEIRA COMPRA I CUPOM WELCOME</strong>"
           }
+        },
+        "message_BEkiRV": {
+          "type": "message",
+          "settings": {
+            "text": "<strong>FRETE GRÁTIS A PARTIR DE R$299,99</strong>"
+          }
         }
       },
       "block_order": [
         "message-1",
-        "message_BEkiRV",
-        "message_7f7DLJ"
+        "message_7f7DLJ",
+        "message_BEkiRV"
       ],
       "settings": {
         "enable_sticky": false,

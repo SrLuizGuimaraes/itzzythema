@@ -36,11 +36,18 @@
           "settings": {
             "text": "<strong>FRETE GRÁTIS A PARTIR DE R$499,99</strong>"
           }
+        },
+        "message_hbfnHw": {
+          "type": "message",
+          "settings": {
+            "text": "Announce something here"
+          }
         }
       },
       "block_order": [
         "message_7f7DLJ",
-        "message_BEkiRV"
+        "message_BEkiRV",
+        "message_hbfnHw"
       ],
       "settings": {
         "enable_sticky": false,

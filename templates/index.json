@@ -42,15 +42,15 @@
         "image_4iYThk": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_pc_2d5979ba-59fb-4cc4-a680-bdcd5eec83b7.png",
-            "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_0ecef3d2-3a2f-4389-b00b-edcfaf243687.png",
+            "image": "shopify://shop_images/Banner_pc_c4edfa70-f735-4806-9c35-90e3c56a4197.png",
+            "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_1_f731929b-e83d-460b-a499-02b3b84cd687.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 1200,
             "button_1_text": "",
-            "button_1_link": "shopify://collections/black",
+            "button_1_link": "shopify://collections/tropical-por-natureza",
             "button_1_style": "link",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",

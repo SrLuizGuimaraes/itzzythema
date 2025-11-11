@@ -72,7 +72,7 @@
         "image_4iYThk"
       ],
       "settings": {
-        "allow_transparent_header": true,
+        "allow_transparent_header": false,
         "show_next_section_button": true,
         "media_size": "auto",
         "autoplay": true,

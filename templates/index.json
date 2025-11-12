@@ -210,34 +210,6 @@
         "subheading": ""
       }
     },
-    "featured_collections_EXXg4Y": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_M9TE6g": {
-          "type": "collection",
-          "settings": {
-            "collection": "mix-match",
-            "products_count": 8,
-            "title": "",
-            "link_url": "shopify://collections/mix-match",
-            "link_text": "ver todos"
-          }
-        }
-      },
-      "block_order": [
-        "collection_M9TE6g"
-      ],
-      "settings": {
-        "separate_section_with_border": false,
-        "hide_product_information": false,
-        "stack_products": false,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": ""
-      }
-    },
     "featured_collections_KfYgFT": {
       "type": "featured-collections",
       "blocks": {
@@ -380,7 +352,6 @@
     "slideshow",
     "collection-list",
     "featured_collections_tAwkiy",
-    "featured_collections_EXXg4Y",
     "featured_collections_KfYgFT",
     "featured_collections_eqQry9",
     "image_with_text_Kw7dH3",

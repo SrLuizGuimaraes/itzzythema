@@ -68,6 +68,11 @@
         "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
         "disabled": false,
         "settings": {}
+      },
+      "16178409538858199964": {
+        "type": "shopify://apps/powr-popup/blocks/app-embed/c42eddd7-7bc0-47cc-aa8a-df388049f012",
+        "disabled": false,
+        "settings": {}
       }
     }
   },

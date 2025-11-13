@@ -149,7 +149,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".powrModal .powrMark{display: none;}"
+      ".powrMark {display: none;}"
     ]
   }
 }

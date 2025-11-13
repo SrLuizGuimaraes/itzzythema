@@ -13,6 +13,7 @@
   "sections": {
     "countdown_condensed_apwTEh": {
       "type": "countdown-condensed",
+      "disabled": true,
       "name": "t:sections.countdown_timer.presets.countdown_timer.name",
       "settings": {
         "content": "acaba em",

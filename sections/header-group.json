@@ -11,6 +11,20 @@
   "type": "header",
   "name": "Header group",
   "sections": {
+    "countdown_condensed_apwTEh": {
+      "type": "countdown-condensed",
+      "name": "t:sections.countdown_timer.presets.countdown_timer.name",
+      "settings": {
+        "content": "acaba em",
+        "link_text": "",
+        "link_url": "",
+        "expiration_date": "2025/11/30",
+        "expiration_behavior": "hide",
+        "desktop_justification": "center",
+        "background": "#930011",
+        "text_color": "#ffffff"
+      }
+    },
     "custom_liquid_zXFbYg": {
       "type": "custom-liquid",
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
@@ -86,6 +100,7 @@
     }
   },
   "order": [
+    "countdown_condensed_apwTEh",
     "custom_liquid_zXFbYg",
     "announcement-bar",
     "header"

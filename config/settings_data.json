@@ -149,7 +149,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".powrMark {display: none;}"
+      ".powrMark.js-powrMark.pad-v-s.flex-center.__web-inspector-hide-shortcut__ {display: none !important;}"
     ]
   }
 }

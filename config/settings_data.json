@@ -149,7 +149,9 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".rpu-credit {display: none !important;}"
+      "/* Tenta o seletor mais comum */.rpu-credit {display: none !important;}",
+      "/* Tenta seletores alternativos que podem ser usados por apps de popup */.popup-app-watermark,.popup-app-credit,.popup-footer-text,.popup-free-version-text,.rpu-credit-text,.rpu-credit-container {display: none !important;}",
+      "/* Tenta um seletor mais genérico para a barra de rodapé do popup */div[style*=\"background-color: rgb(255, 255, 255); padding: 10px; text-align: center;\"] {display: none !important;}"
     ]
   }
 }

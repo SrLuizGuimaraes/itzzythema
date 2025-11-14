@@ -1,0 +1,205 @@
+{%- liquid
+  assign cart_product_ids = cart.items | map: 'product_id'
+  assign max_products_to_display = section.settings.max_products | default: 6
+  assign displayed_products_count = 0
+  assign shown_ids = ''
+  assign random_seed = 'now' | date: '%s' | modulo: 1000
+
+  # Lógica de adaptação para a página de produtos
+  assign current_product_id = product.id | default: 0
+  assign products_to_exclude = cart_product_ids
+
+  # Se estiver na página de produto, adiciona o produto atual à lista de exclusão
+  if current_product_id != 0
+    assign products_to_exclude = products_to_exclude | push: current_product_id
+  endif
+
+  # Define as coleções a serem usadas. Mantendo a lista original, mas idealmente deveria ser configurável no schema.
+  assign collection_handles = "aneis,mais-vendidos,mix-match,brinco,colar,pulseiras" | split: ","
+
+  # Condição para exibir a seção:
+  # 1. Se estiver na página do carrinho (cart.item_count > 0) E a configuração permitir
+  # 2. OU se estiver na página de produto (current_product_id != 0) E a configuração permitir
+  assign should_display = false
+  if cart.item_count > 0 and section.settings.show_on_cart
+    assign should_display = true
+  elsif current_product_id != 0 and section.settings.show_on_product
+    assign should_display = true
+  endif
+-%}
+
+{% if should_display %}
+<section class="upsell-products-section">
+  <style>
+    .upsell-carousel {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      scroll-behavior: smooth;
+    }
+
+    .upsell-product-card {
+      flex: 0 0 calc(50% - 6px);
+      scroll-snap-align: start;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .upsell-product-info {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 180px;
+    }
+
+    .upsell-product-info form {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .upsell-product-info button,
+    .upsell-product-info select {
+      width: 100%;
+      max-width: 200px;
+      margin-top: 6px;
+    }
+
+    .upsell-title,
+    .upsell-product-title a,
+    .upsell-subtitle,
+    .upsell-product-price,
+    .upsell-price-current,
+    .upsell-price-compare {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: normal;
+    }
+
+    .slider-nav,
+    .flickity-page-dots,
+    .flickity-prev-next-button {
+      display: none !important;
+    }
+
+    @media screen and (min-width: 768px) {
+      .upsell-carousel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 24px;
+        overflow-x: unset;
+      }
+
+      .upsell-product-card {
+        flex: unset;
+        scroll-snap-align: unset;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousel = document.querySelector('.upsell-carousel');
+      if (carousel && window.innerWidth < 768 && carousel.children.length > 2) {
+        let scrollAmount = 0;
+        setInterval(() => {
+          scrollAmount += carousel.offsetWidth;
+          if (scrollAmount >= carousel.scrollWidth) scrollAmount = 0;
+          carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+        }, 3000);
+      }
+    });
+  </script>
+
+  <div class="upsell-products-container">
+    <div class="upsell-header">
+      <h3 class="upsell-title">{{ section.settings.title }}</h3>
+      {% if section.settings.subtitle != blank %}
+        <p class="upsell-subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div class="upsell-products-grid upsell-carousel">
+      {% for handle in collection_handles %}
+        {%- liquid
+          if displayed_products_count >= max_products_to_display
+            break
+          endif
+
+          assign collection_products = collections[handle].products | where: "available", true
+          # Usa a lista de exclusão adaptada
+          assign filtered_products = collection_products | reject: "id", products_to_exclude
+          assign collection_size = filtered_products.size
+        -%}
+
+        {% if collection_size > 0 %}
+          {%- liquid
+            assign start_index = random_seed | plus: displayed_products_count | modulo: collection_size
+            assign upsell_product = filtered_products[start_index]
+
+            if shown_ids contains upsell_product.id
+              continue
+            endif
+
+            assign shown_ids = shown_ids | append: upsell_product.id | append: ','
+            assign displayed_products_count = displayed_products_count | plus: 1
+          -%}
+
+          <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
+            <div class="upsell-product-image">
+              <a href="{{ upsell_product.url }}">
+                {% if upsell_product.featured_image %}
+                  <img src="{{ upsell_product.featured_image | image_url: width: 300 }}"
+                       alt="{{ upsell_product.featured_image.alt | default: upsell_product.title }}"
+                       loading="lazy">
+                {% endif %}
+              </a>
+            </div>
+
+            <div class="upsell-product-info">
+              <h4 class="upsell-product-title">
+                <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
+              </h4>
+
+              <div class="upsell-product-price">
+                {% if upsell_product.compare_at_price > upsell_product.price %}
+                  <span class="upsell-price-compare">{{ upsell_product.compare_at_price | money }}</span>
+                {% endif %}
+                <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
+              </div>
+
+              <form method="post" action="/cart/add">
+                {% if upsell_product.variants.size > 1 %}
+                  <select name="id" class="upsell-variant-selector">
+                    {% for variant in upsell_product.variants %}
+                      {% if variant.available %}
+                        <option value="{{ variant.id }}">{{ variant.title }} – {{ variant.price | money }}</option>
+                      {% else %}
+                        <option value="{{ variant.id }}" disabled>{{ variant.title }} – Esgotado</option>
+                      {% endif %}
+                    {% endfor %}
+                  </select>
+                {% else %}
+                  <input type="hidden" name="id" value="{{ upsell_product.variants.first.id }}">
+                {% endif %}
+
+                <button type="submit"
+                        class="button button--primary button--full">
+                  {{ section.settings.button_text }}
+                </button>
+              </form>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

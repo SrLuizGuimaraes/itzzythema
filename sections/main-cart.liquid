@@ -118,7 +118,7 @@
 
                 <div class="h-stack justify-start gap-2">
                   <span class="text-lg">{{ 'cart.general.total' | t }}:</span>
-                  <span class="text-lg">{{- cart.total_price | money_with_currency -}}</span>
+                  <span class="text-lg">{{- cart.total_price-}}</span>
                 </div>
 
                 {%- if section.settings.show_shipping_text -%}
@@ -145,7 +145,7 @@
                 </noscript>
 
                 {%- assign checkout_button = 'cart.general.checkout' | t -%}
-                <button type="button" onclick="yampiClick()" class="button ymp_check_mainBtn ymp_elem_mainBtn" id="ympBtn">Checkout</button>
+                <button type="button" onclick="yampiClick()" class="button ymp_check_mainBtn ymp_elem_mainBtn" id="ympBtn">COMPRAR</button>
               </div>
             </div>
           </div>

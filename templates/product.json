@@ -84,6 +84,12 @@
         "upsell_app_by_essentialwolf_app_block_GkBqrb": {
           "type": "shopify://apps/upsell-app-by-essentialwolf/blocks/app-block/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
           "settings": {}
+        },
+        "liquid_xtNwqC": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% render 'upsell-products-snippet' %}"
+          }
         }
       },
       "block_order": [
@@ -97,7 +103,8 @@
         "buy_buttons",
         "separator",
         "description",
-        "upsell_app_by_essentialwolf_app_block_GkBqrb"
+        "upsell_app_by_essentialwolf_app_block_GkBqrb",
+        "liquid_xtNwqC"
       ],
       "settings": {
         "container_size": "lg",

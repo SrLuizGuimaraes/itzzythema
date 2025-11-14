@@ -149,7 +149,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".powrMark__text {display: none !important;}"
+      ".rpu-credit {display: none !important;}"
     ]
   }
 }

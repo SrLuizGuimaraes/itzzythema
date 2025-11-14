@@ -118,7 +118,7 @@
 
                 <div class="h-stack justify-start gap-2">
                   <span class="text-lg">{{ 'cart.general.total' | t }}:</span>
-                  <span class="text-lg">{{- cart.total_price -}}</span>
+                  <span class="text-lg">{{- cart.total_price | money -}}</span>
                 </div>
 
                 {%- if section.settings.show_shipping_text -%}

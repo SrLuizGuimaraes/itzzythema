@@ -80,6 +80,10 @@
             "collapse_content": false,
             "show_below_gallery": false
           }
+        },
+        "upsell_app_by_essentialwolf_app_block_GkBqrb": {
+          "type": "shopify://apps/upsell-app-by-essentialwolf/blocks/app-block/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
+          "settings": {}
         }
       },
       "block_order": [
@@ -92,7 +96,8 @@
         "quantity_selector",
         "buy_buttons",
         "separator",
-        "description"
+        "description",
+        "upsell_app_by_essentialwolf_app_block_GkBqrb"
       ],
       "settings": {
         "container_size": "lg",
@@ -126,15 +131,6 @@
     },
     "175839008559e52c43": {
       "type": "apps",
-      "blocks": {
-        "zotasell_ai_upsell_cross_sell_upsell_detail_page_dnxXDy": {
-          "type": "shopify://apps/zotasell-ai-upsell-cross-sell/blocks/upsell-detail-page/29660b22-f312-48b7-a61d-7f1eb7b9f7a2",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "zotasell_ai_upsell_cross_sell_upsell_detail_page_dnxXDy"
-      ],
       "settings": {
         "separate_section_with_border": true,
         "remove_vertical_spacing": false,

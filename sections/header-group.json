@@ -40,16 +40,10 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "message_hbfnHw": {
-          "type": "message",
-          "settings": {
-            "text": "BLACK MONTH 🔥🔥🔥"
-          }
-        },
         "message_7f7DLJ": {
           "type": "message",
           "settings": {
-            "text": "05% OFF I  CUPOM WELCOME"
+            "text": "10%  OFF I  CUPOM WELCOME"
           }
         },
         "message_BEkiRV": {
@@ -60,11 +54,9 @@
         }
       },
       "block_order": [
-        "message_hbfnHw",
         "message_7f7DLJ",
         "message_BEkiRV"
       ],
-      "disabled": true,
       "settings": {
         "enable_sticky": false,
         "autoplay": true,

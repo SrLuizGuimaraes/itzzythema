@@ -15,15 +15,15 @@
         "image_P7GBAd": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_pc_16896f3c-d3a4-48f6-9351-ddc1d8e30eae.png",
-            "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_1_a38dfd6b-d8e5-4d88-b010-48e150fdebf3.jpg",
+            "image": "shopify://shop_images/Banner_pc_69e40e79-4df8-4ecc-894a-9cb158adc415.png",
+            "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_7044c85c-2b71-4ed3-acf3-ed482ed38941.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 1200,
             "button_1_text": "",
-            "button_1_link": "shopify://collections/tropical-por-natureza",
+            "button_1_link": "shopify://collections/brasil-com-s",
             "button_1_style": "link",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",

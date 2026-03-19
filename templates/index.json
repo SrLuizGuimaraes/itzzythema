@@ -15,15 +15,15 @@
         "image_P7GBAd": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_pc_71f2e34a-bef0-4d0c-98f7-37ba291b4577.png",
-            "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_0451a3e7-3dd7-4a33-8c46-390fc45175cb.jpg",
+            "image": "shopify://shop_images/Banner_pc_6_f106d088-9cea-4a8d-b9b4-8774de02d78a.png",
+            "mobile_image": "shopify://shop_images/Banner_site_Itzzy_mobile_d409f512-f673-48c1-9787-6680a7ce2d74.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 1200,
             "button_1_text": "",
-            "button_1_link": "shopify://collections/brasil-com-s",
+            "button_1_link": "shopify://collections/brasil-com-s-drop-2",
             "button_1_style": "link",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
